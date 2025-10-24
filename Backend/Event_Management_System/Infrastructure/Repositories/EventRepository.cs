@@ -18,8 +18,8 @@ namespace Infrastructure.Repositories
             return await _context.Events
                 .Include(e => e.Organizer)
                 .Include(e => e.Participants)
-                .Where(e => e.IsPublic == true && e.EndAt >= DateTime.UtcNow)
-                .OrderBy(e => e.StartAt)
+                .Where(e => e.IsPublic == true && e.Date >= DateTime.UtcNow)
+                .OrderBy(e => e.Date)
                 .ToListAsync();
         }
 
@@ -59,7 +59,7 @@ namespace Infrastructure.Repositories
                 .Include(e => e.Organizer)
                 .Include(e => e.Participants)
                 .Where(e => e.Participants.Any(p => p.Id == userId) || e.OrganizerId == userId)
-                .OrderBy(e => e.StartAt)
+                .OrderBy(e => e.Date)
                 .ToListAsync();
         }
 

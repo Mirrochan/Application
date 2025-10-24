@@ -1,5 +1,4 @@
 ﻿using Application.DTOs;
-using Application.DTOs.Application.DTOs;
 using FluentValidation;
 
 namespace Application.Validators
@@ -17,13 +16,9 @@ namespace Application.Validators
                 .MaximumLength(1000).WithMessage("Description cannot exceed 1000 characters")
                 .When(x => !string.IsNullOrEmpty(x.Description));
 
-            RuleFor(x => x.StartAt)
+            RuleFor(x => x.Date)
                 .NotEmpty().WithMessage("Start date is required")
                 .GreaterThan(DateTime.UtcNow).WithMessage("Cannot create event in the past");
-
-            RuleFor(x => x.EndAt)
-                .NotEmpty().WithMessage("End date is required")
-                .GreaterThan(x => x.StartAt).WithMessage("End date must be after start date");
 
             RuleFor(x => x.Location)
                 .NotEmpty().WithMessage("Location is required")
@@ -32,6 +27,7 @@ namespace Application.Validators
 
             RuleFor(x => x.Capacity)
                 .GreaterThanOrEqualTo(0).WithMessage("Capacity cannot be negative");
+          
         }
     }
 }

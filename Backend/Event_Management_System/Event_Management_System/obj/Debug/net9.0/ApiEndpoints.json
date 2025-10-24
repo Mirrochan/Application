@@ -1,6 +1,16 @@
 [
   {
-    "ContainingType": "Controllers.AuthController",
+    "ContainingType": "Event_Management_System.Controllers.AuthController",
+    "Method": "CheckAuth",
+    "RelativePath": "auth/check",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event_Management_System.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "auth/login",
     "HttpMethod": "POST",
@@ -9,14 +19,24 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Application.DTOs.Application.DTOs.LoginRequest",
+        "Type": "Application.DTOs.LoginRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.AuthController",
+    "ContainingType": "Event_Management_System.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event_Management_System.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "auth/register",
     "HttpMethod": "POST",
@@ -25,14 +45,14 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Application.DTOs.Application.DTOs.RegisterRequest",
+        "Type": "Application.DTOs.RegisterRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "GetPublicEvents",
     "RelativePath": "events",
     "HttpMethod": "GET",
@@ -42,7 +62,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "CreateEvent",
     "RelativePath": "events",
     "HttpMethod": "POST",
@@ -51,14 +71,14 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Application.DTOs.Application.DTOs.CreateEventRequest",
+        "Type": "Application.DTOs.CreateEventRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "GetEventById",
     "RelativePath": "events/{id}",
     "HttpMethod": "GET",
@@ -74,7 +94,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "UpdateEvent",
     "RelativePath": "events/{id}",
     "HttpMethod": "PATCH",
@@ -88,14 +108,14 @@
       },
       {
         "Name": "request",
-        "Type": "Application.DTOs.Application.DTOs.UpdateEventRequest",
+        "Type": "Application.DTOs.UpdateEventRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "DeleteEvent",
     "RelativePath": "events/{id}",
     "HttpMethod": "DELETE",
@@ -111,7 +131,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "JoinEvent",
     "RelativePath": "events/{id}/join",
     "HttpMethod": "POST",
@@ -127,7 +147,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Controllers.EventsController",
+    "ContainingType": "Event_Management_System.Controllers.EventsController",
     "Method": "LeaveEvent",
     "RelativePath": "events/{id}/leave",
     "HttpMethod": "POST",
@@ -140,6 +160,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event_Management_System.Controllers.UserController",
+    "Method": "GetUserInfo",
+    "RelativePath": "users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event_Management_System.Controllers.UserController",
+    "Method": "GetMyEvents",
+    "RelativePath": "users/me/events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

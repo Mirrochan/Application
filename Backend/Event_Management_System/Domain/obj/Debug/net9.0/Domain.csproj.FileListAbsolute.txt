@@ -9,3 +9,4 @@ E:\Event Management System\Backend\Event_Management_System\Domain\obj\Debug\net9
 E:\Event Management System\Backend\Event_Management_System\Domain\obj\Debug\net9.0\refint\Domain.dll
 E:\Event Management System\Backend\Event_Management_System\Domain\obj\Debug\net9.0\Domain.pdb
 E:\Event Management System\Backend\Event_Management_System\Domain\obj\Debug\net9.0\ref\Domain.dll
+E:\Event Management System\Backend\Event_Management_System\Domain\obj\Debug\net9.0\Domain.sourcelink.json

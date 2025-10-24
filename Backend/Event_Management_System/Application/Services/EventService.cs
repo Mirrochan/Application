@@ -1,6 +1,5 @@
 ﻿using Application.Abstractions;
 using Application.DTOs;
-using Application.DTOs.Application.DTOs;
 using Application.Validators;
 using Domain.Models;
 using FluentValidation;
@@ -26,7 +25,7 @@ namespace Application.Services
             _updateEventValidator = updateEventValidator;
         }
 
-        public async Task<ICollection<EventSummaryResponse>> GetPublicEventsAsync(Guid? userId = null)
+        public async Task<ICollection<EventSummaryResponse>> GetPublicEventsAsync(Guid? userId)
         {
             var events = await _repository.GetAllPublicEventsAsync();
             var eventResponses = new List<EventSummaryResponse>();
@@ -42,8 +41,7 @@ namespace Application.Services
                     Id = eventModel.Id,
                     Title = eventModel.Title,
                     ShortDescription = GetShortDescription(eventModel.Description),
-                    StartAt = eventModel.StartAt,
-                    EndAt = eventModel.EndAt,
+                    Date = eventModel.Date,
                     Location = eventModel.Location,
                     Capacity = eventModel.Capacity,
                     IsPublic = eventModel.IsPublic,
@@ -64,7 +62,6 @@ namespace Application.Services
 
             var participantCount = eventModel.Participants.Count;
             var isFull = eventModel.Capacity > 0 && participantCount >= eventModel.Capacity;
-            var availableSpots = eventModel.Capacity == 0 ? int.MaxValue : eventModel.Capacity - participantCount;
             var isOrganizer = userId.HasValue && eventModel.OrganizerId == userId.Value;
             var isParticipant = userId.HasValue && eventModel.Participants.Any(p => p.Id == userId.Value);
 
@@ -76,27 +73,18 @@ namespace Application.Services
                 LastName = eventModel.Organizer.LastName
             };
 
-            var participantResponses = eventModel.Participants.Select(p => new UserResponse
-            {
-                Id = p.Id,
-                Email = p.Email,
-                FirstName = p.FirstName,
-                LastName = p.LastName
-            }).ToList();
+
+            List<string> participantResponses = eventModel.Participants.Select(p => p.FirstName).ToList();
+            
 
             return new EventResponse
             {
                 Id = eventModel.Id,
                 Title = eventModel.Title,
                 Description = eventModel.Description,
-                StartAt = eventModel.StartAt,
-                EndAt = eventModel.EndAt,
+                Date = eventModel.Date,
                 Location = eventModel.Location,
                 Capacity = eventModel.Capacity,
-                IsPublic = eventModel.IsPublic,
-                IsFull = isFull,
-                ParticipantCount = participantCount,
-                Organizer = organizerResponse,
                 Participants = participantResponses,
                 IsOrganizer = isOrganizer,
                 IsParticipant = isParticipant
@@ -105,7 +93,6 @@ namespace Application.Services
 
         public async Task<EventResponse> CreateEventAsync(CreateEventRequest request, Guid organizerId)
         {
-            // Validate request
             var validationResult = await _createEventValidator.ValidateAsync(request);
             if (!validationResult.IsValid)
             {
@@ -123,8 +110,7 @@ namespace Application.Services
                 Id = Guid.NewGuid(),
                 Title = request.Title.Trim(),
                 Description = request.Description?.Trim(),
-                StartAt = request.StartAt,
-                EndAt = request.EndAt,
+                Date = request.Date,
                 Location = request.Location.Trim(),
                 Capacity = request.Capacity,
                 IsPublic = request.IsPublic,
@@ -137,7 +123,6 @@ namespace Application.Services
 
         public async Task<EventResponse> UpdateEventAsync(Guid eventId, UpdateEventRequest request, Guid userId)
         {
-            // Validate request
             var validationResult = await _updateEventValidator.ValidateAsync(request);
             if (!validationResult.IsValid)
             {
@@ -161,11 +146,10 @@ namespace Application.Services
             if (request.Description != null)
                 eventModel.Description = request.Description.Trim();
 
-            if (request.StartAt.HasValue)
-                eventModel.StartAt = request.StartAt.Value;
+            if (request.Date.HasValue)
+                eventModel.Date = request.Date.Value;
 
-            if (request.EndAt.HasValue)
-                eventModel.EndAt = request.EndAt.Value;
+          
 
             if (!string.IsNullOrWhiteSpace(request.Location))
                 eventModel.Location = request.Location.Trim();
@@ -261,8 +245,7 @@ namespace Application.Services
                 {
                     Id = eventModel.Id,
                     Title = eventModel.Title,
-                    StartAt = eventModel.StartAt,
-                    EndAt = eventModel.EndAt,
+                    Date = eventModel.Date,
                     Location = eventModel.Location,
                     EventType = eventType
                 });
@@ -275,6 +258,12 @@ namespace Application.Services
         {
             if (string.IsNullOrEmpty(description)) return null;
             return description.Length > 100 ? description[..100] + "..." : description;
+        }
+        
+        public async Task<ICollection<MyEventsResponse>> GetMyEventsAsync(Guid userId)
+        {
+            var events = await _repository.GetUserEventsAsync(userId);
+            return events.Select(e => new MyEventsResponse { Id = e.Id, Title=e.Title, Date = e.Date }).ToList();
         }
     }
 }

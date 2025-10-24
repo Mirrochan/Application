@@ -1,5 +1,4 @@
 ﻿using Application.DTOs;
-using Application.DTOs.Application.DTOs;
 using FluentValidation;
 
 namespace Application.Validators
@@ -26,17 +25,13 @@ namespace Application.Validators
                 .GreaterThanOrEqualTo(0).WithMessage("Capacity cannot be negative")
                 .When(x => x.Capacity.HasValue);
 
-            When(x => x.StartAt.HasValue, () =>
+            When(x => x.Date.HasValue, () =>
             {
-                RuleFor(x => x.StartAt)
+                RuleFor(x => x.Date)
                     .GreaterThan(DateTime.UtcNow).WithMessage("Cannot set event in the past");
             });
 
-            When(x => x.StartAt.HasValue && x.EndAt.HasValue, () =>
-            {
-                RuleFor(x => x.EndAt)
-                    .GreaterThan(x => x.StartAt).WithMessage("End date must be after start date");
-            });
+            
         }
     }
 }

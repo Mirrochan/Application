@@ -13,3 +13,4 @@ E:\Event Management System\Backend\Event_Management_System\Application\obj\Debug
 E:\Event Management System\Backend\Event_Management_System\Application\obj\Debug\net9.0\refint\Application.dll
 E:\Event Management System\Backend\Event_Management_System\Application\obj\Debug\net9.0\Application.pdb
 E:\Event Management System\Backend\Event_Management_System\Application\obj\Debug\net9.0\ref\Application.dll
+E:\Event Management System\Backend\Event_Management_System\Application\obj\Debug\net9.0\Application.sourcelink.json

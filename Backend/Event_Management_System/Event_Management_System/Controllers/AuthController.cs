@@ -1,7 +1,8 @@
 ﻿using Application.Abstractions;
-using Application.DTOs.Application.DTOs;
+using Application.DTOs;
 using Application.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Event_Management_System.Controllers
 {
@@ -53,6 +54,41 @@ namespace Event_Management_System.Controllers
             {
                 return Unauthorized(new { error = ex.Message });
             }
+        }
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("tasty-cookies");
+            return Ok(new { message = "Logout successful" });
+        }
+
+        [HttpGet("check")]
+        public async Task<IActionResult> CheckAuth()
+        {
+            if (User.Identity?.IsAuthenticated == true)
+            {
+                var user = await _userService.GetUserByIdAsync(GetUserIdFromToken());
+                if (user == null)
+                {
+                    return Unauthorized();
+                }
+                return Ok();
+            }
+              
+            return Unauthorized();
+        }
+        
+        private Guid GetUserIdFromToken()
+        {
+            var userIdClaim = User.FindFirst("userId")?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+            {
+                throw new Exception("Unauthorized - userId claim not found");
+            }
+
+            return userId;
         }
     }
 }

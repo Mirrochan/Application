@@ -1,4 +1,6 @@
-﻿using Application.DTOs.Application.DTOs;
+﻿
+
+using Application.DTOs;
 
 namespace Application.Abstractions
 {

@@ -1,6 +1,5 @@
 ﻿using Application.Abstractions;
 using Application.DTOs;
-using Application.DTOs.Application.DTOs;
 using Application.Validators;
 using Domain.Models;
 using FluentValidation;
@@ -31,7 +30,7 @@ namespace Application.Services
 
         public async Task RegisterAsync(RegisterRequest request)
         {
-            // Validate request
+           
             var validationResult = await _registerValidator.ValidateAsync(request);
             if (!validationResult.IsValid)
             {
@@ -53,16 +52,11 @@ namespace Application.Services
             };
 
             await _userRepository.CreateNewUser(userModel);
-
-
-
-
-
         }
 
         public async Task<string> LoginAsync(LoginRequest request)
         {
-            // Validate request
+        
             var validationResult = await _loginValidator.ValidateAsync(request);
             if (!validationResult.IsValid)
             {

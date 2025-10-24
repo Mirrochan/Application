@@ -1,11 +1,11 @@
 ﻿using Application.Abstractions;
 using Application.DTOs;
-using Application.DTOs.Application.DTOs;
 using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+
 
 namespace Event_Management_System.Controllers
 {
@@ -21,14 +21,16 @@ namespace Event_Management_System.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetPublicEvents()
         {
             var userId = GetUserIdFromToken();
             var events = await _eventService.GetPublicEventsAsync(userId);
             return Ok(events);
         }
-
+        
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetEventById(string id)
         {
             if (!Guid.TryParse(id, out Guid eventId))
@@ -50,7 +52,7 @@ namespace Event_Management_System.Controllers
             {
                 Guid userId = GetUserIdFromToken();
                 var result = await _eventService.CreateEventAsync(request, userId);
-                return CreatedAtAction(nameof(GetEventById), new { id = result.Id }, result);
+                return Ok(  result );
             }
             catch (Exception ex)
             {

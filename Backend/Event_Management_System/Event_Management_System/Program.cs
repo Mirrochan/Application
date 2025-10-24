@@ -2,6 +2,7 @@ using Application;
 using Application.Abstractions;
 using Application.Services;
 using Application.Validators;
+using Event_Management_System.Extensions;
 using FluentValidation;
 using Infrastructure;
 using Infrastructure.Jwt;
@@ -12,8 +13,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using TaskManager.Extensions;
-using WebAPI.Middleware;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +28,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<EventService, EventService>();
+builder.Services.AddScoped<IEventService, EventService>();
 
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
@@ -67,25 +67,26 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Event Management API v1");
-        c.RoutePrefix = string.Empty; // тепер Swagger відкриватиметься на корені
+        c.RoutePrefix = string.Empty;
     });
 }
 
 app.UseCors("Angular");
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-// Database seeding
+
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<EventManagmentSystemDbContext>();
     context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
-   
+    await DbSeeder.SeedAsync(context);
+
 }
 
 app.Run();

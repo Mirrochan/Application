@@ -65,3 +65,4 @@ E:\Event Management System\Backend\Event_Management_System\Event_Management_Syst
 E:\Event Management System\Backend\Event_Management_System\Event_Management_System\obj\Debug\net9.0\Event_Management_System.genruntimeconfig.cache
 E:\Event Management System\Backend\Event_Management_System\Event_Management_System\obj\Debug\net9.0\ref\Event_Management_System.dll
 E:\Event Management System\Backend\Event_Management_System\Event_Management_System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\Event Management System\Backend\Event_Management_System\Event_Management_System\obj\Debug\net9.0\Event_Management_System.sourcelink.json

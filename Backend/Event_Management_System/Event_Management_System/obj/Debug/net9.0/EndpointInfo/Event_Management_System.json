@@ -67,6 +67,30 @@
         }
       }
     },
+    "/auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/check": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/events": {
       "get": {
         "tags": [
@@ -232,15 +256,38 @@
           }
         }
       }
+    },
+    "/users/me/events": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/users/me": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
       "CreateEventRequest": {
         "required": [
-          "endAt",
+          "date",
           "location",
-          "startAt",
           "title"
         ],
         "type": "object",
@@ -253,11 +300,7 @@
             "type": "string",
             "nullable": true
           },
-          "startAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endAt": {
+          "date": {
             "type": "string",
             "format": "date-time"
           },
@@ -332,12 +375,7 @@
             "type": "string",
             "nullable": true
           },
-          "startAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "endAt": {
+          "date": {
             "type": "string",
             "format": "date-time",
             "nullable": true
