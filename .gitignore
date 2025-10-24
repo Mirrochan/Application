@@ -1,0 +1,30 @@
+# Root .gitignore for the repository
+appsettings.json
+# Ignore build artifacts
+**/bin/
+**/obj/
+
+# Node / frontend
+node_modules/
+Frontend/dist/
+.angular/
+
+# IDEs
+.vscode/
+.idea/
+.vs/
+
+# Environment files / secrets
+.env
+**/.env
+
+# Local appsettings (contain DB passwords and JWT secrets)
+Backend/Event_Management_System/Event_Management_System/appsettings.json
+
+# Certificates and keys
+*.pfx
+*.pem
+*.key
+
+# Logs
+*.log

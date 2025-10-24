@@ -61,7 +61,7 @@ this.eventForm.markAllAsTouched();if (this.eventForm.invalid) return;
     this.submitting = false;
     console.error('Error creating event', err);
     
-    this.backendError = err.error.title || err.message || 'Сталася невідома помилка';
+    this.backendError =err.error?.error || err.error.title || err.message || 'Сталася невідома помилка';
     
     console.error('Full error object:', err);
     console.error('Error message:', err.error?.error);

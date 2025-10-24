@@ -13,6 +13,8 @@ import { EventModel } from '../../../data/interfaces/event.model';
   styleUrl: './event-list.component.scss'
 })
 export class EventsListComponent implements OnInit {
+  
+  
   events: EventModel[] = [];
   searchTerm = '';
   isLoading = true;
@@ -21,7 +23,7 @@ export class EventsListComponent implements OnInit {
     private eventsService: EventsService,
     public authService: AuthService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadEvents();
@@ -30,7 +32,7 @@ export class EventsListComponent implements OnInit {
   loadEvents(): void {
     this.eventsService.getPublicEvents().subscribe({
       next: (events) => {
-        
+
         this.events = events;
         this.isLoading = false;
       },
@@ -67,10 +69,10 @@ export class EventsListComponent implements OnInit {
     });
   }
 
-  
+
   get filteredEvents(): EventModel[] {
     if (!this.searchTerm) return this.events;
-    
+
     const searchLower = this.searchTerm.toLowerCase();
     return this.events.filter(event =>
       event.title.toLowerCase().includes(searchLower) ||
@@ -81,5 +83,9 @@ export class EventsListComponent implements OnInit {
 
   viewEventDetails(eventId: string): void {
     this.router.navigate(['/events', eventId]);
+  }
+
+  openEvent(id: string) {
+   this.router.navigate(['/event-details', id]);
   }
 }

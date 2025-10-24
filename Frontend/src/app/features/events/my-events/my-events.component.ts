@@ -15,6 +15,7 @@ export class MyEventsComponent implements OnInit {
   events: MyEvents[] = [];
   viewMode: 'month' | 'week' = 'month';
 
+  isEvents = true;
   currentDate: Date = new Date();
   currentMonthLabel: string = '';
   daysInMonth: number[] = [];
@@ -24,7 +25,7 @@ export class MyEventsComponent implements OnInit {
   constructor(
     private eventService: EventsService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadEvents();
@@ -33,9 +34,13 @@ export class MyEventsComponent implements OnInit {
 
   loadEvents() {
     this.eventService.getUserEvents().subscribe({
-      next: (data) => (this.events = data),
+      next: (data) => {
+        (this.events = data)
+        if (this.events.length == 0 || this.events ==null) { this.isEvents = false; } else { this.isEvents = true; }
+      },
       error: (err) => console.error('Error loading events', err),
     });
+
   }
 
   updateCalendar() {
@@ -99,14 +104,14 @@ export class MyEventsComponent implements OnInit {
     this.router.navigate(['/event-details', id]);
   }
 
-  
+
   isToday(day: number): boolean {
     const today = new Date();
     const cellDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
     return today.toDateString() === cellDate.toDateString();
   }
 
-  
+
   isTodayInWeek(date: Date): boolean {
     const today = new Date();
     return today.toDateString() === date.toDateString();
@@ -115,7 +120,7 @@ export class MyEventsComponent implements OnInit {
   private getStartOfWeek(date: Date): Date {
     const start = new Date(date);
     const day = start.getDay();
-    const diff = start.getDate() - day + (day === 0 ? -7 : 0); 
+    const diff = start.getDate() - day + (day === 0 ? -7 : 0);
     start.setDate(diff);
     return start;
   }

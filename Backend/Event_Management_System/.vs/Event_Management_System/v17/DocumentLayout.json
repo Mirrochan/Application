@@ -7,20 +7,68 @@
       "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\dbseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dbseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\abstractions\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\abstractions\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\event_management_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\event_management_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\abstractions\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\abstractions\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\abstractions\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\abstractions\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\eventmanagmentsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\eventmanagmentsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|e:\\event management system\\backend\\event_management_system\\domain\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|e:\\event management system\\backend\\event_management_system\\domain\\models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\dtos\\eventrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,24 +99,12 @@
       "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|e:\\event management system\\backend\\event_management_system\\application\\abstractions\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\abstractions\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,36 +123,8 @@
       "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\jwt\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\dbseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dbseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|e:\\event management system\\backend\\event_management_system\\domain\\models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\eventmanagmentsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\eventmanagmentsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|e:\\event management system\\backend\\event_management_system\\domain\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A79FE76A-6E38-4808-9A0C-2174083CB6D1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\jwt\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\jwt\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\event_management_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\event_management_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B20B0B2-47C7-44E3-8059-6F4A9492908F}|Infrastructure\\Infrastructure.csproj|e:\\event management system\\backend\\event_management_system\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -135,14 +143,6 @@
       "RelativeMoniker": "D:0:0:{F9FAB831-B3CB-4DF9-B885-8CC44496D9F5}|Application\\Application.csproj|solutionrelative:application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\event_management_system.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\event_management_system.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
@@ -154,8 +154,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 15,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "JwtProvider.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtProvider.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Jwt\\JwtProvider.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtProvider.cs",
+              "RelativeToolTip": "Infrastructure\\Jwt\\JwtProvider.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T13:54:24.782Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -197,384 +210,21 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:10:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "JwtProvider.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtProvider.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Jwt\\JwtProvider.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtProvider.cs",
-              "RelativeToolTip": "Infrastructure\\Jwt\\JwtProvider.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T13:54:24.782Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\EventService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\EventService.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\EventService.cs",
-              "RelativeToolTip": "Application\\Services\\EventService.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAkwAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T11:51:44.728Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\UserController.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Event_Management_System\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAArwBgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T17:34:01.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventRequests.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventRequests.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\EventRequests.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventRequests.cs",
-              "RelativeToolTip": "Application\\DTOs\\EventRequests.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA2wBgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:07:03.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEventService.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventService.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\IEventService.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventService.cs",
-              "RelativeToolTip": "Application\\Abstractions\\IEventService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAewAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T17:49:49.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthDtos.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\AuthDtos.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\AuthDtos.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\AuthDtos.cs",
-              "RelativeToolTip": "Application\\DTOs\\AuthDtos.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:07:07.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExceptionHandlingMiddleware.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
-              "RelativeToolTip": "Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T16:43:54.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventResponses.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventResponses.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\EventResponses.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventResponses.cs",
-              "RelativeToolTip": "Application\\DTOs\\EventResponses.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwCkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:06:38.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateEventRequestValidator.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\CreateEventRequestValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Validators\\CreateEventRequestValidator.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\CreateEventRequestValidator.cs",
-              "RelativeToolTip": "Application\\Validators\\CreateEventRequestValidator.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T16:11:58.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\UserService.cs",
-              "RelativeToolTip": "Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAgwAEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T11:51:43.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateRequestValidator.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\UpdateRequestValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Validators\\UpdateRequestValidator.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\UpdateRequestValidator.cs",
-              "RelativeToolTip": "Application\\Validators\\UpdateRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T16:28:09.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginRequestValidator.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\LoginRequestValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Validators\\LoginRequestValidator.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\LoginRequestValidator.cs",
-              "RelativeToolTip": "Application\\Validators\\LoginRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T16:11:27.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RegisterRequestValidator.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\RegisterRequestValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Validators\\RegisterRequestValidator.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\RegisterRequestValidator.cs",
-              "RelativeToolTip": "Application\\Validators\\RegisterRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T16:09:13.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\EventController.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\EventController.cs",
-              "RelativeToolTip": "Event_Management_System\\Controllers\\EventController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T17:36:18.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Event_Management_System\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T18:23:40.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserService.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\IUserService.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserService.cs",
-              "RelativeToolTip": "Application\\Abstractions\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T17:50:29.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IEventRepository.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Abstractions\\IEventRepository.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventRepository.cs",
-              "RelativeToolTip": "Application\\Abstractions\\IEventRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:10:22.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T18:07:49.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EventRepository.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\EventRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\EventRepository.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\EventRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\EventRepository.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T08:11:09.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Event_Management_System\\Properties\\launchSettings.json",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Event_Management_System\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-21T13:19:31.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Jwt\\PasswordHasher.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\PasswordHasher.cs",
-              "RelativeToolTip": "Infrastructure\\Jwt\\PasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T14:05:15.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
               "Title": "DbSeeds.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\DbSeeds.cs",
               "RelativeDocumentMoniker": "Infrastructure\\DbSeeds.cs",
               "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\DbSeeds.cs",
               "RelativeToolTip": "Infrastructure\\DbSeeds.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAwwBsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBEAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T09:35:54.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EventModel.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\EventModel.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\EventModel.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\EventModel.cs",
-              "RelativeToolTip": "Domain\\Models\\EventModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T18:14:11.237Z",
+              "WhenOpened": "2025-10-24T18:25:55.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json",
-              "RelativeDocumentMoniker": "Event_Management_System\\appsettings.json",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json",
-              "RelativeToolTip": "Event_Management_System\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-19T14:08:38.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\UserModel.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\UserModel.cs",
-              "RelativeToolTip": "Domain\\Models\\UserModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T18:13:20.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "EventManagmentSystemDbContext.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\EventManagmentSystemDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\EventManagmentSystemDbContext.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\EventManagmentSystemDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\EventManagmentSystemDbContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T17:43:37.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Program.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Program.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Program.cs",
-              "RelativeToolTip": "Event_Management_System\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T17:19:39.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "JwtOptions.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtOptions.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Jwt\\JwtOptions.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtOptions.cs",
-              "RelativeToolTip": "Infrastructure\\Jwt\\JwtOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T13:54:04.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 6,
               "Title": "Event_Management_System.csproj",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Event_Management_System.csproj",
               "RelativeDocumentMoniker": "Event_Management_System\\Event_Management_System.csproj",
@@ -586,7 +236,345 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Event_Management_System\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA8wBgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T17:34:01.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RequestLoggingMiddleware.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
+              "RelativeToolTip": "Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T17:26:13.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T16:43:54.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventRepository.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\EventRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\EventRepository.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\EventRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\EventRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA9wA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T08:11:09.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEventRepository.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Abstractions\\IEventRepository.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventRepository.cs",
+              "RelativeToolTip": "Application\\Abstractions\\IEventRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T07:10:22.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EventService.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\EventService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\EventService.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\EventService.cs",
+              "RelativeToolTip": "Application\\Services\\EventService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwB0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T11:51:44.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Program.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Program.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Program.cs",
+              "RelativeToolTip": "Event_Management_System\\Program.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAADgv1YAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T17:19:39.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\EventController.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\EventController.cs",
+              "RelativeToolTip": "Event_Management_System\\Controllers\\EventController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T17:36:18.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEventService.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventService.cs",
+              "RelativeDocumentMoniker": "Application\\Abstractions\\IEventService.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventService.cs",
+              "RelativeToolTip": "Application\\Abstractions\\IEventService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T17:49:49.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\UserModel.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\UserModel.cs",
+              "RelativeToolTip": "Domain\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T18:13:20.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EventManagmentSystemDbContext.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\EventManagmentSystemDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\EventManagmentSystemDbContext.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\EventManagmentSystemDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\EventManagmentSystemDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wBgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T17:43:37.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json",
+              "RelativeDocumentMoniker": "Event_Management_System\\appsettings.json",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json",
+              "RelativeToolTip": "Event_Management_System\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-19T14:08:38.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApiExtensions.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Extensions\\ApiExtensions.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Extensions\\ApiExtensions.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Extensions\\ApiExtensions.cs",
+              "RelativeToolTip": "Event_Management_System\\Extensions\\ApiExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T17:12:31.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EventModel.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\EventModel.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\EventModel.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\EventModel.cs",
+              "RelativeToolTip": "Domain\\Models\\EventModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T18:14:11.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\AuthDtos.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\AuthDtos.cs",
+              "RelativeToolTip": "Application\\DTOs\\AuthDtos.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T07:07:07.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EventRequests.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventRequests.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\EventRequests.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventRequests.cs",
+              "RelativeToolTip": "Application\\DTOs\\EventRequests.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA2wBgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T07:07:03.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EventResponses.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventResponses.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\EventResponses.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventResponses.cs",
+              "RelativeToolTip": "Application\\DTOs\\EventResponses.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T07:06:38.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateEventRequestValidator.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\CreateEventRequestValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Validators\\CreateEventRequestValidator.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\CreateEventRequestValidator.cs",
+              "RelativeToolTip": "Application\\Validators\\CreateEventRequestValidator.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T16:11:58.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwAEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T11:51:43.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateRequestValidator.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\UpdateRequestValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Validators\\UpdateRequestValidator.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\UpdateRequestValidator.cs",
+              "RelativeToolTip": "Application\\Validators\\UpdateRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T16:28:09.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginRequestValidator.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\LoginRequestValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Validators\\LoginRequestValidator.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\LoginRequestValidator.cs",
+              "RelativeToolTip": "Application\\Validators\\LoginRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T16:11:27.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RegisterRequestValidator.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\RegisterRequestValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Validators\\RegisterRequestValidator.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\RegisterRequestValidator.cs",
+              "RelativeToolTip": "Application\\Validators\\RegisterRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T16:09:13.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Event_Management_System\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T18:23:40.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserService.cs",
+              "RelativeDocumentMoniker": "Application\\Abstractions\\IUserService.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserService.cs",
+              "RelativeToolTip": "Application\\Abstractions\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T17:50:29.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T18:07:49.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Event_Management_System\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Event_Management_System\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-21T13:19:31.273Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 29,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Jwt\\PasswordHasher.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\PasswordHasher.cs",
+              "RelativeToolTip": "Infrastructure\\Jwt\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T14:05:15.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Jwt\\JwtOptions.cs",
+              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtOptions.cs",
+              "RelativeToolTip": "Infrastructure\\Jwt\\JwtOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T13:54:04.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "Infrastructure.csproj",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
@@ -598,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IUserRepository.cs",
@@ -610,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IPasswordHasher.cs",
@@ -622,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "IJwtProvider.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IJwtProvider.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IJwtProvider.cs",
@@ -634,30 +622,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ApiExtensions.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Extensions\\ApiExtensions.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Extensions\\ApiExtensions.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Extensions\\ApiExtensions.cs",
-              "RelativeToolTip": "Event_Management_System\\Extensions\\ApiExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T17:12:31.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "RequestLoggingMiddleware.cs",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
-              "RelativeDocumentMoniker": "Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
-              "RelativeToolTip": "Event_Management_System\\Middlewares\\RequestLoggingMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T17:26:13.457Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 35,
               "Title": "Event_Management_System",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Event_Management_System.csproj",
@@ -666,6 +630,18 @@
               "RelativeToolTip": "Event_Management_System\\Event_Management_System.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-21T13:23:54.822Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:10:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

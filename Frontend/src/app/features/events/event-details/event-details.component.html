@@ -1,13 +1,13 @@
 <div class="min-h-screen bg-gray-50 py-8">
   <div class="max-w-4xl mx-auto px-4">
-    
-  
+
+
     <div *ngIf="isLoading" class="text-center py-12">
       <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       <p class="mt-4 text-gray-600">Loading event details...</p>
     </div>
 
-   
+
     <div *ngIf="error && !isLoading" class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
       <div class="flex items-center">
         <span class="material-icons text-red-600 mr-3">error</span>
@@ -18,39 +18,47 @@
       </div>
     </div>
 
-   
+
     <div *ngIf="!isLoading && event">
 
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-6">
         <div class="flex justify-between items-start">
           <div>
-            <h1 class="text-3xl font-bold text-gray-900 mb-3  " >{{ event.title }}</h1>
+            <h1 class="text-3xl font-bold text-gray-900 mb-3  ">{{ event.title }}</h1>
             <p class="text-gray-600 text-lg hitespace-normal break-all">{{ event.description }}</p>
           </div>
-          
-    
+
+
           <div *ngIf="event.isOrganizer" class="flex gap-3">
-            <button (click)="editEvent()" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <button (click)="editEvent()"
+              class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
               <span class="material-icons text-sm">edit</span>
               Edit
             </button>
-            <button (click)="deleteEvent()" class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+            <button (click)="deleteEvent()"
+              class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
               <span class="material-icons text-sm">delete</span>
               Delete
             </button>
           </div>
         </div>
       </div>
-
+      <app-delete-modal [id]="event.id" 
+        [isVisible]="ShowModal"
+        [eventTitle]="event.title"
+        [isDeleting]="isDeleting"
+        (confirm)="confirmDelete()"
+        (cancel)="closeModal()"
+      ></app-delete-modal>
       <div class="grid grid-cols-1 lg:grid-cols-1 gap-8">
 
         <div class="lg:col-span-2 space-y-6">
-          
+
 
           <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 class="text-xl font-semibold text-gray-900 mb-6">Event Details</h2>
             <div class="space-y-4">
-        
+
               <div class="flex items-start gap-4">
                 <span class="material-icons text-gray-500 mt-1">event</span>
                 <div>
@@ -60,7 +68,7 @@
                 </div>
               </div>
 
-          
+
               <div class="flex items-start gap-4">
                 <span class="material-icons text-gray-500 mt-1">location_on</span>
                 <div>
@@ -73,30 +81,27 @@
                 <span class="material-icons text-gray-500 mt-1">people</span>
                 <div class="flex-1">
                   <p class="text-gray-900 font-medium">Capacity</p>
-                  <p class="text-gray-600">{{ event.participants.length }} / {{ event.capacity || 'Unlimited' }} participants</p>
+                  <p class="text-gray-600">{{ event.participants.length }} / {{ event.capacity || 'Unlimited' }}
+                    participants</p>
                   <div *ngIf="event.capacity" class="w-full bg-gray-200 rounded-full h-2 mt-2">
-                    <div 
-                      class="bg-green-500 h-2 rounded-full transition-all duration-300" 
-                      [style.width]="(event.participants.length / event.capacity * 100) + '%'"
-                    ></div>
+                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300"
+                      [style.width]="(event.participants.length / event.capacity * 100) + '%'"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-   
+
           <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 class="text-xl font-semibold text-gray-900 mb-6">
-              Participants 
+              Participants
               <span class="text-gray-500 text-lg">({{ event.participants.length }})</span>
             </h2>
-            
+
             <div *ngIf="event.participants.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div 
-                *ngFor="let participant of event.participants" 
-                class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
-              >
+              <div *ngFor="let participant of event.participants"
+                class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                 <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                   <span class="text-blue-600 font-semibold text-sm">
                     {{ participant }}
@@ -113,47 +118,35 @@
           </div>
         </div>
 
-    
-       
-         
-          
-            <div *ngIf="!event.isOrganizer"><div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <button
-                *ngIf="authService.isLoggedIn()"
-                (click)="event.isParticipant ? leaveEvent() : joinEvent()"
-                [disabled]="isEventFull() && !event.isParticipant"
-                [class]="getButtonClasses()"
-                class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-medium transition-colors"
-              >
-                <span class="material-icons text-sm">
-                  {{ event.isParticipant ? 'person_remove' : 'person_add' }}
-                </span>
-                {{ event.isParticipant ? 'Leave Event' : (isEventFull() ? 'Event Full' : 'Join Event') }}
-              </button>
-              
-              <button
-                *ngIf="!authService.isLoggedIn()"
-                routerLink="/login"
-                class="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              >
-                <span class="material-icons text-sm">login</span>
-                Login to Join
-              </button>
-            </div>
 
-            
-         
 
-         
+
+
+        <div *ngIf="!event.isOrganizer">
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <button *ngIf="authService.isLoggedIn()" (click)="event.isParticipant ? leaveEvent() : joinEvent()"
+              [disabled]="isEventFull() && !event.isParticipant" [class]="getButtonClasses()"
+              class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-medium transition-colors">
+              <span class="material-icons text-sm">
+                {{ event.isParticipant ? 'person_remove' : 'person_add' }}
+              </span>
+              {{ event.isParticipant ? 'Leave Event' : (isEventFull() ? 'Event Full' : 'Join Event') }}
+            </button>
+
+            <button *ngIf="!authService.isLoggedIn()" routerLink="/login"
+              class="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+              <span class="material-icons text-sm">login</span>
+              Login to Join
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
 
     <div *ngIf="!isLoading" class="mt-6">
-      <button
-        (click)="goBack()"
-        class="flex items-center gap-2 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg font-medium transition-colors"
-      >
+      <button (click)="goBack()"
+        class="flex items-center gap-2 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg font-medium transition-colors">
         <span class="material-icons">arrow_back</span>
         Back to Events
       </button>

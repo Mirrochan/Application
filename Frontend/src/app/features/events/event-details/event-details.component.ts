@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { AuthService } from '../../../data/services/auth.service';
+import { DeleteModalComponent } from "../delete-modal/delete-modal.component";
 
 interface EventFullInfo {
   id: string;
@@ -18,21 +19,25 @@ interface EventFullInfo {
 
 @Component({
   selector: 'app-event-details',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, DeleteModalComponent],
   templateUrl: './event-details.component.html',
   styleUrl: './event-details.component.scss'
 })
 export class EventDetailsComponent implements OnInit {
+
   event?: EventFullInfo;
   isLoading = true;
   error: string | null = null;
+
+  ShowModal: boolean = false;
+  isDeleting: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private eventsService: EventsService,
     public authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadEventDetails();
@@ -40,7 +45,7 @@ export class EventDetailsComponent implements OnInit {
 
   loadEventDetails(): void {
     const eventId = this.route.snapshot.paramMap.get('id');
-    
+
     if (!eventId) {
       this.error = 'Event ID not provided';
       this.isLoading = false;
@@ -96,26 +101,26 @@ export class EventDetailsComponent implements OnInit {
 
   editEvent(): void {
     if (this.event) {
-      this.router.navigate(['/update-event', this.event.id, ]);
+      this.router.navigate(['/update-event', this.event.id,]);
     }
   }
 
-  deleteEvent(): void {
+  confirmDelete(): void {
     if (!this.event) return;
 
-    const confirmed = confirm('Are you sure you want to delete this event? This action cannot be undone.');
-    
-    if (confirmed) {
-      this.eventsService.deleteEvent(this.event.id).subscribe({
-        next: () => {
-          this.router.navigate(['/events']);
-        },
-        error: (error) => {
-          console.error('Error deleting event:', error);
-          alert(error.error?.error || 'Failed to delete event');
-        }
-      });
-    }
+    this.isDeleting = true;
+    this.eventsService.deleteEvent(this.event.id).subscribe({
+      next: () => {
+        this.isDeleting = false;
+        this.router.navigate(['/events']);
+      },
+      error: (error) => {
+        this.isDeleting = false;
+        console.error('Error deleting event:', error);
+        alert(error.error?.error || 'Failed to delete event');
+      }
+    });
+
   }
 
   isEventFull(): boolean {
@@ -134,7 +139,14 @@ export class EventDetailsComponent implements OnInit {
       return 'bg-green-600 text-white hover:bg-green-700';
     }
   }
-    goBack(): void {
-      this.router.navigate(["/events"]);
+  goBack(): void {
+    this.router.navigate(["/events"]);
   }
+  closeModal(): void {
+    this.ShowModal = false;
+  }
+  deleteEvent() {
+   this.ShowModal = true;
+  }
+
 }

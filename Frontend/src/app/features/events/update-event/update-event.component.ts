@@ -49,12 +49,12 @@ export class UpdateEventComponent implements OnInit {
       next: (data) => {
         this.eventData = data;
 
-        // Розділяємо дату й час для форми
+     
         const dateObj = new Date(this.eventData.date);
         const date = dateObj.toISOString().split('T')[0];
         const time = dateObj.toTimeString().substring(0, 5);
 
-        // Заповнюємо форму отриманими даними
+ 
         this.eventForm.patchValue({
           title: this.eventData.title,
           description: this.eventData.description,

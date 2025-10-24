@@ -40,8 +40,9 @@ builder.Services.AddValidatorsFromAssemblyContaining<UpdateEventRequestValidator
 var jwtOptions = builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>();
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
 
-builder.Services.AddJwtAuthentication(builder.Services.BuildServiceProvider().GetRequiredService<IOptions<JwtOptions>>());
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
 
+builder.Services.AddJwtAuthentication(builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>());
 
 builder.Services.AddCors(options =>
 {
