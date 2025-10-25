@@ -1,0 +1,53 @@
+<nav class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-end  h-16">
+
+      <div class="flex  items-center space-x-7 ">
+
+        <a *ngIf="authService.isLoggedIn()" routerLink="/events" routerLinkActive="text-black font-medium"
+          class="text-gray-700 hover:text-black font-medium transition flex text-center">
+          <span class="material-icons mr-2">list</span>
+          Events
+        </a>
+
+        <a *ngIf="authService.isLoggedIn()" routerLink="/my-events" routerLinkActive="text-black font-medium"
+          class="text-gray-700 hover:text-black font-medium transition flex text-center">
+          <span class="material-icons mr-2">calendar_today</span>
+          My Events
+        </a>
+        <a *ngIf="authService.isLoggedIn()" routerLink="/create-event"
+          class="bg-indigo-700 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex text-center"><span
+            class="material-icons mr-2">add</span>
+          Create Event
+        </a>
+
+        <div *ngIf="authService.isLoggedIn()" class="relative">
+          <button class="flex items-center space-x-2 text-gray-700 font-medium flex text-center">
+            <span class="material-icons mr-2">account_circle</span><span>{{ userName  }}</span>
+
+          </button>
+        </div>
+        <div *ngIf="authService.isLoggedIn()" class="relative">
+          <span
+            class="material-icons text-gray-700 hover:text-black  font-medium transition flex text-center cursor-pointer"
+            (click)="logout()">logout</span>
+        </div>
+
+        <div *ngIf="!authService.isLoggedIn()">
+
+          <a routerLink="/login" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+            Login
+          </a>
+          <a routerLink="/register"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="bg-gray-50">
+  <router-outlet></router-outlet>
+</main>
