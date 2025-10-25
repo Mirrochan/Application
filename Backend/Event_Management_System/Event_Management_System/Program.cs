@@ -3,6 +3,7 @@ using Application.Abstractions;
 using Application.Services;
 using Application.Validators;
 using Event_Management_System.Extensions;
+using Event_Management_System.Middleware;
 using FluentValidation;
 using Infrastructure;
 using Infrastructure.Jwt;
@@ -13,7 +14,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 

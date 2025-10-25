@@ -14,17 +14,21 @@ namespace Event_Management_System.Controllers
     public class EventsController : ControllerBase
     {
         private readonly IEventService _eventService;
+        private readonly IUserService _userService;
 
-        public EventsController(IEventService eventService)
+        public EventsController(IEventService eventService, IUserService userService)
         {
             _eventService = eventService;
+            _userService = userService;
         }
 
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> GetPublicEvents()
         {
-            var userId = GetUserIdFromToken();
+            var userId = await GetUserIdFromToken();
+            if (userId == Guid.Empty)
+                return Unauthorized(); 
             var events = await _eventService.GetPublicEventsAsync(userId);
             return Ok(events);
         }
@@ -38,7 +42,9 @@ namespace Event_Management_System.Controllers
                 return BadRequest(new { error = "Invalid event ID" });
             }
 
-            var userId = GetUserIdFromToken();
+            var userId = await GetUserIdFromToken();
+            if (userId == Guid.Empty)
+                return Unauthorized(); 
             var eventItem = await _eventService.GetEventByIdAsync(eventId, userId);
 
             return eventItem != null ? Ok(eventItem) : NotFound();
@@ -50,7 +56,9 @@ namespace Event_Management_System.Controllers
         {
             try
             {
-                Guid userId = GetUserIdFromToken();
+                var userId = await GetUserIdFromToken();
+                if (userId == Guid.Empty)
+                    return Unauthorized(); 
                 var result = await _eventService.CreateEventAsync(request, userId);
                 return Ok(  result );
             }
@@ -71,7 +79,9 @@ namespace Event_Management_System.Controllers
 
             try
             {
-                var userId = GetUserIdFromToken();
+                var userId = await GetUserIdFromToken();
+                if (userId == Guid.Empty)
+                    return Unauthorized(); 
                 var result = await _eventService.UpdateEventAsync(eventId, request, (Guid)userId);
                 return Ok(result);
             }
@@ -92,7 +102,9 @@ namespace Event_Management_System.Controllers
 
             try
             {
-                var userId = GetUserIdFromToken();
+                var userId = await GetUserIdFromToken();
+                if (userId == Guid.Empty)
+                    return Unauthorized(); 
                 await _eventService.DeleteEventAsync(eventId, (Guid)userId);
                 return NoContent();
             }
@@ -113,7 +125,9 @@ namespace Event_Management_System.Controllers
 
             try
             {
-                var userId = GetUserIdFromToken();
+                var userId = await GetUserIdFromToken();
+                if (userId == Guid.Empty)
+                    return Unauthorized();
                 await _eventService.JoinEventAsync(eventId, (Guid)userId);
                 return Ok(new { message = "Successfully joined the event" });
             }
@@ -134,7 +148,9 @@ namespace Event_Management_System.Controllers
 
             try
             {
-                Guid userId = GetUserIdFromToken();
+                var userId = await GetUserIdFromToken();
+                if (userId == Guid.Empty)
+                    return Unauthorized(); 
                 await _eventService.LeaveEventAsync(eventId, userId);
                 return Ok(new { message = "Successfully left the event" });
             }
@@ -144,17 +160,22 @@ namespace Event_Management_System.Controllers
             }
         }
 
-        private Guid GetUserIdFromToken()
+        private async Task<Guid> GetUserIdFromToken()
         {
             var userIdClaim = User.FindFirst("userId")?.Value;
 
             if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
             {
-                throw new Exception("Unauthorized - userId claim not found");
+                return Guid.Empty;
             }
-
+            var user = await _userService.GetUserByIdAsync(userId);
+            if(user == null)
+            {
+                return Guid.Empty;
+            }
             return userId;
         }
+
 
     }
 }

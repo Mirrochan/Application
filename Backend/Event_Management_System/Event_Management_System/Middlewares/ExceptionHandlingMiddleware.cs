@@ -1,8 +1,8 @@
 ﻿using System.Net;
 using System.Text.Json;
 using FluentValidation;
-
-
+namespace Event_Management_System.Middleware
+{
     public class ExceptionHandlingMiddleware
     {
         private readonly RequestDelegate _next;
@@ -34,6 +34,7 @@ using FluentValidation;
 
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
+
             context.Response.ContentType = "application/json";
 
             var statusCode = exception switch
@@ -76,3 +77,4 @@ using FluentValidation;
             return context.Response.WriteAsync(json);
         }
     }
+}

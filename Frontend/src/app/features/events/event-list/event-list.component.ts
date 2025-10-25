@@ -13,8 +13,8 @@ import { EventModel } from '../../../data/interfaces/event.model';
   styleUrl: './event-list.component.scss'
 })
 export class EventsListComponent implements OnInit {
-  
-  
+
+
   events: EventModel[] = [];
   searchTerm = '';
   isLoading = true;
@@ -86,6 +86,6 @@ export class EventsListComponent implements OnInit {
   }
 
   openEvent(id: string) {
-   this.router.navigate(['/event-details', id]);
+    this.router.navigate(['/event-details', id]);
   }
 }

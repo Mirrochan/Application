@@ -56,6 +56,7 @@ export class LoginComponent {
  setName() {
   this.authService.getName().subscribe({
     next: (name) => {
+      localStorage.removeItem('username');
       localStorage.setItem('username', name.name);
     },
     error: (err) => {

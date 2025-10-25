@@ -30,13 +30,12 @@ namespace Event_Management_System.Controllers
         public async Task<IActionResult> GetUserInfo()
         {
             var userId = GetUserIdFromToken();
-            UserResponse user = null;
-           
-                 user = await _userService.GetUserByIdAsync(GetUserIdFromToken());
-                if (user == null)
-                {
+            UserResponse user = await _userService.GetUserByIdAsync(GetUserIdFromToken());
+            if (user == null)
+            {
                     return Unauthorized();
-                }
+            }
+
             return Ok(new { name = user.FirstName });
 
         }

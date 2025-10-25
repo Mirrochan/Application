@@ -95,10 +95,16 @@ export class UpdateEventComponent implements OnInit {
         this.backendError = null;
         this.router.navigate(['/event-details', this.eventId]);
       },
-      error: (err) => {
+    error: (err) => {
         this.submitting = false;
-        console.error('Error updating event:', err);
-        this.backendError = err.error?.error || 'Unknown error occurred.';
+        console.error('Full error object:', err);
+
+        const rawMessage =
+          err.error?.error ||
+          err.error?.title ||
+          err.message ;
+
+        this.backendError = this.cleanValidationMessage(rawMessage);
       }
     });
   }
@@ -109,5 +115,25 @@ export class UpdateEventComponent implements OnInit {
 
   private combineDateTime(date: string, time: string): Date {
     return new Date(`${date}T${time}`);
+  }
+   cleanValidationMessage(input: any): string {
+    if (!input || typeof input !== 'string') return '';
+
+    const lines = input.replace(/\r/g, '').split('\n');
+
+    const filtered = lines.filter(line =>
+      !line.includes('Validation failed') &&
+      !line.includes('Severity:') &&
+      !line.trim().startsWith('--')
+    );
+
+    if (filtered.length === 0) {
+      const match = input.match(/--\s*(.*?):\s*(.*?)\s*Severity/i);
+      if (match) {
+        return `${match[1]}: ${match[2]}`;
+      }
+    }
+
+    return filtered.join('\n').trim();
   }
 }

@@ -66,13 +66,13 @@ namespace Application.Services
             var user = await _userRepository.GetByEmailAsync(request.Email.ToLower().Trim());
             if (user == null)
             {
-                throw new Exception("Invalid credentials");
+                throw new Exception("Incorrect email");
             }
 
             var result = _passwordHasher.Verify(request.Password, user.PasswordHash);
             if (!result)
             {
-                throw new Exception("Invalid credentials");
+                throw new Exception("Incorrect password");
             }
 
             var token = _jwtProvider.GenerateToken(user);
