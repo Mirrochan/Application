@@ -27,7 +27,7 @@ namespace Infrastructure
             modelBuilder.Entity<EventModel>()
                 .HasMany(e => e.Participants)
                 .WithMany(u => u.ParticipatingEvents)
-                .UsingEntity(j => j.ToTable("EventParticipants"));
+                 .UsingEntity(j => j.ToTable("EventParticipants"));
         }
 
     }

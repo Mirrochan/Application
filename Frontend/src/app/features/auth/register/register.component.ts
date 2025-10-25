@@ -60,7 +60,7 @@ export class RegisterComponent {
     }
   }
 getFormProgress(): number {
-  const totalFields = 4;
+  const totalFields = 5;
   const completedFields = Object.keys(this.registerForm.controls).filter(
     key => this.registerForm.get(key)?.valid
   ).length;
