@@ -2,6 +2,23 @@
 
 This repository contains a sample Event Management System with a .NET 9 backend, EF Core-based persistence, and an Angular 19 frontend.
 
+## Manual Start (without Docker)
+If you prefer running the app locally without Docker:
+1. Configure the backend
+   - Rename `appsettings.json.example` → `appsettings.json`
+   - Update the database connection string and any required secrets.
+2. Run the backend
+   ```powershell
+   cd Backend/Event_Management_System
+   dotnet restore
+   dotnet run
+   ```
+3. Run the frontend
+ ```powershell
+cd ../../Frontend
+npm install
+ng serve
+```
 ## Quickstart (Docker)
 
 Prerequisites:
@@ -13,7 +30,7 @@ Prerequisites:
 
 	```powershell
 	Copy-Item .env.example .env
-	# then edit .env and replace 'changeme' and 'replace_with_a_strong_secret'
+	# then edit .env and replace 'change' and 'replace_with_a_strong_secret'
 	```
 
 2. Build and start all services using Docker Compose:
@@ -42,11 +59,6 @@ dotnet restore
 dotnet ef database update --project Infrastructure/Infrastructure.csproj --startup-project Event_Management_System/Event_Management_System.csproj
 ```
 
-Or using a temporary container:
-
-```powershell
-docker run --rm -v ${PWD}:/src -w /src mcr.microsoft.com/dotnet/sdk:9.0 bash -c "dotnet restore && dotnet ef database update --project Infrastructure/Infrastructure.csproj --startup-project Event_Management_System/Event_Management_System.csproj"
-```
 
 ## Environment variables
 The repository includes `.env.example` listing variables required for local Docker runs. Copy to `.env` and set real secrets there. Example variables:
@@ -54,8 +66,4 @@ The repository includes `.env.example` listing variables required for local Dock
 - `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`
 - `CONNECTION_STRING` (used by backend)
 - `JWT_SECRET`
-- `API_URL` (frontend runtime API URL, if needed)
 
-## Notes
-- The repository currently includes `docker-compose.yml` configured to read sensitive values from `.env`.
-- For production use, move secrets to a proper secret store (Docker secrets, Azure Key Vault, etc.).
