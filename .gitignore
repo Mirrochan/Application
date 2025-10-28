@@ -4,6 +4,8 @@ appsettings.json
 **/bin/
 **/obj/
 
+Backend/Event_Management_System/Event_Management_System/appsettings.Develop.json
+
 # Node / frontend
 node_modules/
 Frontend/dist/

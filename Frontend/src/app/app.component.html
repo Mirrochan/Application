@@ -21,6 +21,12 @@
           Create Event
         </a>
 
+         <a *ngIf="authService.isLoggedIn()" routerLink="/ai-assistant" routerLinkActive="text-black font-medium"
+          class="text-gray-700 hover:text-black font-medium transition flex text-center">
+          
+          Ai-assistant
+        </a>
+
         <div *ngIf="authService.isLoggedIn()" class="relative">
           <button class="flex items-center space-x-2 text-gray-700 font-medium flex text-center">
             <span class="material-icons mr-2">account_circle</span><span>{{ userName  }}</span>

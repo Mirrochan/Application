@@ -16,7 +16,7 @@ namespace Infrastructure
         public DbSet<UserModel> Users { get; set; }
         public DbSet<EventModel> Events { get; set; }
         public DbSet<TagModel> Tags { get; set; }
-
+        public DbSet<AiConversation> AiConversations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EventModel>()
@@ -33,6 +33,7 @@ namespace Infrastructure
             modelBuilder.Entity<EventModel>()
                 .HasMany(e => e.Tags)
                 .WithMany(t => t.Events);
+           
         }
 
     }
