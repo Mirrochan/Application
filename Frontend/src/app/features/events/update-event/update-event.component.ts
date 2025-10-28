@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { EventFullInfo, UpdateEventRequest } from '../../../data/interfaces/event.model';
 import { Tag } from '../../../data/interfaces/tag.model';
 import { TagService } from '../../../data/services/tag.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-update-event',
@@ -14,7 +16,8 @@ import { TagService } from '../../../data/services/tag.service';
   templateUrl: './update-event.component.html',
   styleUrls: ['./update-event.component.scss']
 })
-export class UpdateEventComponent implements OnInit {
+export class UpdateEventComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
   eventForm!: FormGroup;
   submitting = false;
   backendError: string | null = null;
@@ -51,8 +54,9 @@ export class UpdateEventComponent implements OnInit {
   }
 
   private fetchAvailableTags(): void {
-
-    this.tagService.getAllTags().subscribe({
+    this.tagService.getAllTags()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (tags: any) => {
         this.availableTags = tags;
         this.availableTags = this.availableTags.filter(
@@ -74,7 +78,9 @@ export class UpdateEventComponent implements OnInit {
     this.selectedTag = this.selectedTag.filter(t => t.id !== tag.id);
   }
   private loadEventData(): void {
-    this.eventService.getEventById(this.eventId).subscribe({
+    this.eventService.getEventById(this.eventId)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (data) => {
         this.eventData = data;
         this.selectedTag = this.eventData.tags;
@@ -165,5 +171,10 @@ export class UpdateEventComponent implements OnInit {
     }
 
     return filtered.join('\n').trim();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

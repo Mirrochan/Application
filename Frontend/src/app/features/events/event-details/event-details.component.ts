@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { AuthService } from '../../../data/services/auth.service';
 import { DeleteModalComponent } from "../delete-modal/delete-modal.component";
 import { Tag } from '../../../data/interfaces/tag.model';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 interface EventFullInfo {
   id: string;
@@ -24,7 +26,8 @@ interface EventFullInfo {
   templateUrl: './event-details.component.html',
   styleUrl: './event-details.component.scss'
 })
-export class EventDetailsComponent implements OnInit {
+export class EventDetailsComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
 
   event?: EventFullInfo;
   isLoading = true;
@@ -54,7 +57,7 @@ export class EventDetailsComponent implements OnInit {
       return;
     }
 
-    this.eventsService.getEventById(eventId).subscribe({
+    this.eventsService.getEventById(eventId).pipe(takeUntil(this.destroy$)).subscribe({
       next: (event: any) => {
         this.event = event;
         this.eventTags = event.tags;
@@ -71,7 +74,7 @@ export class EventDetailsComponent implements OnInit {
   joinEvent(): void {
     if (!this.event) return;
 
-    this.eventsService.joinEvent(this.event.id).subscribe({
+    this.eventsService.joinEvent(this.event.id).pipe(takeUntil(this.destroy$)).subscribe({
       next: () => {
         if (this.event) {
           this.event.isParticipant = true;
@@ -88,7 +91,7 @@ export class EventDetailsComponent implements OnInit {
   leaveEvent(): void {
     if (!this.event) return;
 
-    this.eventsService.leaveEvent(this.event.id).subscribe({
+    this.eventsService.leaveEvent(this.event.id).pipe(takeUntil(this.destroy$)).subscribe({
       next: () => {
         if (this.event) {
           this.event.isParticipant = false;
@@ -112,7 +115,7 @@ export class EventDetailsComponent implements OnInit {
     if (!this.event) return;
 
     this.isDeleting = true;
-    this.eventsService.deleteEvent(this.event.id).subscribe({
+    this.eventsService.deleteEvent(this.event.id).pipe(takeUntil(this.destroy$)).subscribe({
       next: () => {
         this.isDeleting = false;
         this.router.navigate(['/events']);
@@ -150,6 +153,11 @@ export class EventDetailsComponent implements OnInit {
   }
   deleteEvent() {
    this.ShowModal = true;
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

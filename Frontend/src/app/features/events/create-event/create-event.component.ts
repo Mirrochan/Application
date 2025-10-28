@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,6 +6,8 @@ import { EventsService } from '../../../data/services/events.service';
 import { CreateEventRequest } from '../../../data/interfaces/event.model';
 import { Tag } from '../../../data/interfaces/tag.model';
 import { TagService } from '../../../data/services/tag.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-create-event',
@@ -14,7 +16,8 @@ import { TagService } from '../../../data/services/tag.service';
   templateUrl: './create-event.component.html',
   styleUrls: ['./create-event.component.scss']
 })
-export class CreateEventComponent {
+export class CreateEventComponent implements OnDestroy {
+  private destroy$ = new Subject<void>();
   eventForm: FormGroup;
   submitting = false;
   backendError: string | null = null;
@@ -44,7 +47,9 @@ ngOnInit(): void {
   }
   private fetchAvailableTags(): void {
 
-    this.tagService.getAllTags().subscribe({
+    this.tagService.getAllTags()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (tags: any) => {
         this.availableTags = tags;
       },
@@ -81,7 +86,9 @@ ngOnInit(): void {
       tagIds: this.selectedTags.map(tag => tag.id)
     };
 
-    this.eventService.createEvent(newEvent).subscribe({
+    this.eventService.createEvent(newEvent)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (data1) => {
         this.submitting = false;
         this.backendError = null;
@@ -132,4 +139,8 @@ ngOnInit(): void {
     return filtered.join('\n').trim();
   }
 
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }

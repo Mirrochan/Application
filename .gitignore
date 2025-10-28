@@ -1,10 +1,7 @@
 # Root .gitignore for the repository
-appsettings.json
 # Ignore build artifacts
 **/bin/
 **/obj/
-
-Backend/Event_Management_System/Event_Management_System/appsettings.Develop.json
 
 # Node / frontend
 node_modules/

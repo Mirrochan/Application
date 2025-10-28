@@ -11,7 +11,7 @@ export class AuthService {
   private readonly API_URL = 'http://localhost:5107';
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
   public isLoggedIn$ = this.isLoggedInSubject.asObservable();
-  constructor(private http: HttpClient) {this.checkAuth().subscribe();}
+  constructor(private http: HttpClient) {}
 
   login(credentials: LoginRequest): Observable<any> {
     return this.http.post(`${this.API_URL}/auth/login`, credentials, { 

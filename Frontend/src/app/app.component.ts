@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from './data/services/auth.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 
 @Component({
@@ -11,7 +13,8 @@ import { AuthService } from './data/services/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
   title = 'Event Management System';
   public userName: any;
 
@@ -23,13 +26,20 @@ export class AppComponent implements OnInit {
     this.userName = localStorage.getItem('username');
   }
   logout(): void {
-    this.authService.logout().subscribe({
-      next: () => {
-        this.router.navigate(['/login']);
-      },
-      error: (err) => {
-        console.log(err.error.error);
-      }
-    });
+    this.authService.logout()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.log(err.error.error);
+        }
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

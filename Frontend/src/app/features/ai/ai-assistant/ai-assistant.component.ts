@@ -1,9 +1,10 @@
-import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { aiAsistantConversation, aiAsistantResponce } from '../../../data/interfaces/ai.model';
 import { AiAssistantService } from '../../../data/services/ai-assistant.service';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 type ChatMessage = aiAsistantResponce | LoadingMessage;
 
@@ -20,9 +21,10 @@ interface LoadingMessage {
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule]
 })
-export class AiAssistantComponent implements OnInit, AfterViewChecked {
+export class AiAssistantComponent implements OnInit, OnDestroy, AfterViewChecked {
   @ViewChild('chatContainer', { static: false }) private chatContainer!: ElementRef;
   @ViewChild('messageInput', { static: false }) private messageInput!: ElementRef;
+  private destroy$ = new Subject<void>();
 
   chatForm: FormGroup;
   messages: ChatMessage[] = [];
@@ -89,7 +91,9 @@ export class AiAssistantComponent implements OnInit, AfterViewChecked {
     this.chatForm.reset();
     this.scrollToBottom();
 
-    this.aiAssistantService.askQuestion({ question }).subscribe({
+    this.aiAssistantService.askQuestion({ question })
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (response) => {
         this.messages = this.messages.filter(msg => !this.isLoadingMessage(msg) || msg.id !== loadingMessage.id);
 
@@ -164,5 +168,10 @@ export class AiAssistantComponent implements OnInit, AfterViewChecked {
     const target = event.target as HTMLTextAreaElement;
     target.style.height = 'auto';
     target.style.height = target.scrollHeight + 'px';
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
