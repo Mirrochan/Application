@@ -163,6 +163,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Event_Management_System.Controllers.TagController",
+    "Method": "GetAllTags",
+    "RelativePath": "tags/getAllTags",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Event_Management_System.Controllers.UserController",
     "Method": "GetUserInfo",
     "RelativePath": "users/me",

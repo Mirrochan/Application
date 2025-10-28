@@ -257,6 +257,18 @@
         }
       }
     },
+    "/tags/getAllTags": {
+      "get": {
+        "tags": [
+          "Tag"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/users/me/events": {
       "get": {
         "tags": [
@@ -314,6 +326,14 @@
           },
           "isPublic": {
             "type": "boolean"
+          },
+          "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -391,6 +411,14 @@
           },
           "isPublic": {
             "type": "boolean",
+            "nullable": true
+          },
+          "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "nullable": true
           }
         },

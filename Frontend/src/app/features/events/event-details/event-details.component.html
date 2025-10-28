@@ -1,12 +1,10 @@
 <div class="min-h-screen bg-gray-50 py-8">
   <div class="max-w-4xl mx-auto px-4">
 
-
     <div *ngIf="isLoading" class="text-center py-12">
       <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       <p class="mt-4 text-gray-600">Loading event details...</p>
     </div>
-
 
     <div *ngIf="error && !isLoading" class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
       <div class="flex items-center">
@@ -18,16 +16,22 @@
       </div>
     </div>
 
-
     <div *ngIf="!isLoading && event">
-
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-6">
         <div class="flex justify-between items-start">
           <div>
             <h1 class="text-3xl font-bold text-gray-900 mb-3  ">{{ event.title }}</h1>
             <p class="text-gray-600 text-lg hitespace-normal break-all">{{ event.description }}</p>
+            <div class=" flex items-center gap-2 mt-4">
+              <div *ngFor="let tag of eventTags" class="flex items-center gap-1">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white shadow-sm"
+                  [style.background]="tag.color">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white mr-1.5"></span>
+                  {{ tag.name }}
+                </span>
+              </div>
+            </div>
           </div>
-
 
           <div *ngIf="event.isOrganizer" class="flex gap-3">
             <button (click)="editEvent()"
@@ -43,18 +47,10 @@
           </div>
         </div>
       </div>
-      <app-delete-modal [id]="event.id" 
-        [isVisible]="ShowModal"
-        [eventTitle]="event.title"
-        [isDeleting]="isDeleting"
-        (confirm)="confirmDelete()"
-        (cancel)="closeModal()"
-      ></app-delete-modal>
+      <app-delete-modal [id]="event.id" [isVisible]="ShowModal" [eventTitle]="event.title" [isDeleting]="isDeleting"
+        (confirm)="confirmDelete()" (cancel)="closeModal()"></app-delete-modal>
       <div class="grid grid-cols-1 lg:grid-cols-1 gap-8">
-
         <div class="lg:col-span-2 space-y-6">
-
-
           <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 class="text-xl font-semibold text-gray-900 mb-6">Event Details</h2>
             <div class="space-y-4">
@@ -67,7 +63,6 @@
                   <p class="text-gray-600">{{ event.date | date:'HH:mm' }}</p>
                 </div>
               </div>
-
 
               <div class="flex items-start gap-4">
                 <span class="material-icons text-gray-500 mt-1">location_on</span>
@@ -91,7 +86,6 @@
               </div>
             </div>
           </div>
-
 
           <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 class="text-xl font-semibold text-gray-900 mb-6">
@@ -117,10 +111,6 @@
             </div>
           </div>
         </div>
-
-
-
-
 
         <div *ngIf="!event.isOrganizer">
           <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">

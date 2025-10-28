@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { EventFullInfo, UpdateEventRequest } from '../../../data/interfaces/event.model';
+import { Tag } from '../../../data/interfaces/tag.model';
+import { TagService } from '../../../data/services/tag.service';
 
 @Component({
   selector: 'app-update-event',
@@ -19,12 +21,16 @@ export class UpdateEventComponent implements OnInit {
   eventId!: string;
   eventData!: EventFullInfo;
 
+  availableTags: Tag[] = [];
+  selectedTag: Tag[] = [];
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private eventService: EventsService,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    private tagService: TagService
+  ) { }
 
   ngOnInit(): void {
     this.eventId = this.route.snapshot.paramMap.get('id')!;
@@ -44,11 +50,35 @@ export class UpdateEventComponent implements OnInit {
     });
   }
 
+  private fetchAvailableTags(): void {
+
+    this.tagService.getAllTags().subscribe({
+      next: (tags: any) => {
+        this.availableTags = tags;
+        this.availableTags = this.availableTags.filter(
+          tag => !this.selectedTag.some(selected => selected.id === tag.id)
+        );
+      },
+      error: (err) => {
+        console.error('Error fetching tags:', err);
+      }
+    });
+  }
+  public selectTag(tag: Tag): void {
+    if(this.selectedTag.length == 5) return;
+    this.selectedTag.push(tag);
+    this.availableTags = this.availableTags.filter(t => t.id !== tag.id);
+  }
+  public deselectTag(tag: Tag): void {
+    this.availableTags.push(tag);
+    this.selectedTag = this.selectedTag.filter(t => t.id !== tag.id);
+  }
   private loadEventData(): void {
     this.eventService.getEventById(this.eventId).subscribe({
       next: (data) => {
         this.eventData = data;
-
+        this.selectedTag = this.eventData.tags;
+        this.fetchAvailableTags();
         const dateObj = new Date(this.eventData.date);
         const date = dateObj.toISOString().split('T')[0];
         const time = dateObj.toTimeString().substring(0, 5);
@@ -84,7 +114,8 @@ export class UpdateEventComponent implements OnInit {
       date: dateConst,
       location: form.location,
       capacity: form.capacity ? +form.capacity : 0,
-      isPublic: form.visibility
+      isPublic: form.visibility,
+      tagIds: this.selectedTag.map(tag => tag.id)
     };
 
     this.eventService.updateEvent(this.eventId, updatedEvent).subscribe({
@@ -93,14 +124,14 @@ export class UpdateEventComponent implements OnInit {
         this.backendError = null;
         this.router.navigate(['/event-details', this.eventId]);
       },
-    error: (err) => {
+      error: (err) => {
         this.submitting = false;
         console.error('Full error object:', err);
 
         const rawMessage =
           err.error?.error ||
           err.error?.title ||
-          err.message ;
+          err.message;
 
         this.backendError = this.cleanValidationMessage(rawMessage);
       }
@@ -111,10 +142,11 @@ export class UpdateEventComponent implements OnInit {
     this.router.navigate(['/events']);
   }
 
+
   private combineDateTime(date: string, time: string): Date {
     return new Date(`${date}T${time}`);
   }
-   cleanValidationMessage(input: any): string {
+  cleanValidationMessage(input: any): string {
     if (!input || typeof input !== 'string') return '';
 
     const lines = input.replace(/\r/g, '').split('\n');

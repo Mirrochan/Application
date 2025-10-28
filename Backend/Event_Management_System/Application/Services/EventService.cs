@@ -12,17 +12,20 @@ namespace Application.Services
         private readonly IUserRepository _userRepository;
         private readonly IValidator<CreateEventRequest> _createEventValidator;
         private readonly IValidator<UpdateEventRequest> _updateEventValidator;
+        private readonly ITagRepository _tagRepository;
 
         public EventService(
             IEventRepository repository,
             IUserRepository userRepository,
             IValidator<CreateEventRequest> createEventValidator,
-            IValidator<UpdateEventRequest> updateEventValidator)
+            IValidator<UpdateEventRequest> updateEventValidator,
+            ITagRepository tagRepository)
         {
             _repository = repository;
             _userRepository = userRepository;
             _createEventValidator = createEventValidator;
             _updateEventValidator = updateEventValidator;
+            _tagRepository = tagRepository;
         }
 
         public async Task<ICollection<EventSummaryResponse>> GetPublicEventsAsync(Guid? userId)
@@ -48,7 +51,8 @@ namespace Application.Services
                     IsFull = isFull,
                     ParticipantCount = participantCount,
                     OrganizerName = $"{eventModel.Organizer.FirstName} {eventModel.Organizer.LastName}",
-                    IsParticipant = isParticipant
+                    IsParticipant = isParticipant,
+                    Tags = eventModel.Tags.Select(t => new TagDto { Id = t.Id, Name = t.Name, Color = t.Color}).ToList()
                 });
             }
 
@@ -65,15 +69,6 @@ namespace Application.Services
             var isOrganizer = userId.HasValue && eventModel.OrganizerId == userId.Value;
             var isParticipant = userId.HasValue && eventModel.Participants.Any(p => p.Id == userId.Value);
 
-            var organizerResponse = new UserResponse
-            {
-                Id = eventModel.Organizer.Id,
-                Email = eventModel.Organizer.Email,
-                FirstName = eventModel.Organizer.FirstName,
-                LastName = eventModel.Organizer.LastName
-            };
-
-
             List<string> participantResponses = eventModel.Participants.Select(p => p.FirstName).ToList();
             
 
@@ -87,7 +82,9 @@ namespace Application.Services
                 Capacity = eventModel.Capacity,
                 Participants = participantResponses,
                 IsOrganizer = isOrganizer,
-                IsParticipant = isParticipant
+                IsParticipant = isParticipant,
+                Tags = eventModel.Tags.Select(t => new TagDto { Id = t.Id, Name = t.Name, Color = t.Color }).ToList()
+
             };
         }
 
@@ -105,6 +102,19 @@ namespace Application.Services
                 throw new Exception("Organizer not found");
             }
 
+            var tags = new List<TagModel>();
+            if (request.TagIds != null)
+            {
+                foreach (var tagId in request.TagIds)
+                {
+                    var tag = await _tagRepository.GetTagByIdAsync(tagId);
+                    if (tag != null)
+                    {
+                        tags.Add(tag);
+                    }
+                }
+            }
+
             var eventModel = new EventModel
             {
                 Id = Guid.NewGuid(),
@@ -114,7 +124,8 @@ namespace Application.Services
                 Location = request.Location.Trim(),
                 Capacity = request.Capacity,
                 IsPublic = request.IsPublic,
-                OrganizerId = organizerId
+                OrganizerId = organizerId,
+                Tags = tags
             };
 
             await _repository.AddAsync(eventModel);
@@ -149,17 +160,20 @@ namespace Application.Services
             if (request.Date.HasValue)
                 eventModel.Date = request.Date.Value;
 
-          
-
             if (!string.IsNullOrWhiteSpace(request.Location))
                 eventModel.Location = request.Location.Trim();
 
             if (request.Capacity.HasValue)
                 eventModel.Capacity = request.Capacity.Value;
-
-            if (request.IsPublic.HasValue)
-                eventModel.IsPublic = request.IsPublic.Value;
-
+            eventModel.Tags.Clear();
+            foreach (var tagId in request.TagIds)
+            {
+                var tag = await _tagRepository.GetTagByIdAsync(tagId);
+                if (tag != null)
+                {
+                    eventModel.Tags.Add(tag);
+                }
+            }
 
             await _repository.UpdateAsync(eventModel);
             return await GetEventByIdAsync(eventId, userId);
@@ -240,14 +254,12 @@ namespace Application.Services
 
             foreach (var eventModel in events)
             {
-                var eventType = eventModel.OrganizerId == userId ? "organized" : "participating";
                 calendarEvents.Add(new CalendarEventResponse
                 {
                     Id = eventModel.Id,
                     Title = eventModel.Title,
                     Date = eventModel.Date,
-                    Location = eventModel.Location,
-                    EventType = eventType
+                    Color = eventModel.Tags.First().Color
                 });
             }
 
@@ -259,11 +271,6 @@ namespace Application.Services
             if (string.IsNullOrEmpty(description)) return null;
             return description.Length > 100 ? description[..100] + "..." : description;
         }
-        
-        public async Task<ICollection<MyEventsResponse>> GetMyEventsAsync(Guid userId)
-        {
-            var events = await _repository.GetUserEventsAsync(userId);
-            return events.Select(e => new MyEventsResponse { Id = e.Id, Title=e.Title, Date = e.Date }).ToList();
-        }
+
     }
 }

@@ -13,5 +13,6 @@ namespace Domain.Models
         public Guid OrganizerId { get; set; }
         public UserModel Organizer { get; set; } = null!;
         public ICollection<UserModel> Participants { get; set; } = new List<UserModel>();
+        public ICollection<TagModel> Tags { get; set; } = new List<TagModel>();
     }
 }

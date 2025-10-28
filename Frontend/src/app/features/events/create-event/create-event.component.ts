@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { CreateEventRequest } from '../../../data/interfaces/event.model';
+import { Tag } from '../../../data/interfaces/tag.model';
+import { TagService } from '../../../data/services/tag.service';
 
 @Component({
   selector: 'app-create-event',
@@ -16,10 +18,16 @@ export class CreateEventComponent {
   eventForm: FormGroup;
   submitting = false;
   backendError: string | null = null;
+
+  availableTags: Tag[] = [];
+  selectedTags: Tag[] = [];
+
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private eventService: EventsService
+    private eventService: EventsService,
+    private tagService: TagService
   ) {
     this.eventForm = this.fb.group({
       title: ['', Validators.required],
@@ -30,6 +38,29 @@ export class CreateEventComponent {
       capacity: [''],
       visibility: [true, Validators.required],
     });
+  }
+ngOnInit(): void {
+    this.fetchAvailableTags();
+  }
+  private fetchAvailableTags(): void {
+
+    this.tagService.getAllTags().subscribe({
+      next: (tags: any) => {
+        this.availableTags = tags;
+      },
+      error: (err: any) => {
+        console.error('Error fetching tags:', err);
+      }
+    });
+  }
+  public selectTag(tag: Tag): void {
+    if (this.selectedTags.length >= 5) return;
+    this.selectedTags.push(tag);
+    this.availableTags = this.availableTags.filter(t => t.id !== tag.id);
+  }
+  public deselectTag(tag: Tag): void {
+    this.availableTags.push(tag);
+    this.selectedTags = this.selectedTags.filter(t => t.id !== tag.id);
   }
 
   onSubmit() {
@@ -46,7 +77,8 @@ export class CreateEventComponent {
 
       location: form.location,
       capacity: form.capacity ? +form.capacity : 0,
-      isPublic: form.visibility
+      isPublic: form.visibility,
+      tagIds: this.selectedTags.map(tag => tag.id)
     };
 
     this.eventService.createEvent(newEvent).subscribe({

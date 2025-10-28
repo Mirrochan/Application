@@ -11,6 +11,44 @@ namespace Infrastructure
             if (await context.Users.AnyAsync()) return;
 
             var passwordHasher = new PasswordHasher();
+            var Tags = new List<TagModel>
+            {
+                new TagModel { Id = Guid.NewGuid(), Name = "Technology", Color = "#3B82F6" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Programming", Color = "#8B5CF6" },
+                new TagModel { Id = Guid.NewGuid(), Name = "AI & Machine Learning", Color = "#10B981" },
+
+                new TagModel { Id = Guid.NewGuid(), Name = "Business", Color = "#059669" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Startups", Color = "#DC2626" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Networking", Color = "#0EA5E9" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Marketing", Color = "#F97316" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Finance", Color = "#14B8A6" },
+
+                new TagModel { Id = Guid.NewGuid(), Name = "Art", Color = "#8B5CF6" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Music", Color = "#EF4444" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Photography", Color = "#F59E0B" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Writing", Color = "#10B981" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Dance", Color = "#DC2626" },
+
+                new TagModel { Id = Guid.NewGuid(), Name = "Education", Color = "#0EA5E9" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Workshop", Color = "#84CC16" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Conference", Color = "#8B5CF6" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Training", Color = "#10B981" },
+
+                new TagModel { Id = Guid.NewGuid(), Name = "Charity", Color = "#EF4444" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Volunteering", Color = "#10B981" },
+
+                new TagModel { Id = Guid.NewGuid(), Name = "Sports", Color = "#DC2626" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Cooking", Color = "#DC2626" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Gaming", Color = "#8B5CF6" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Movies", Color = "#6366F1" },
+
+                new TagModel { Id = Guid.NewGuid(), Name = "Health", Color = "#10B981" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Travel", Color = "#0EA5E9" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Language Exchange", Color = "#EF4444" },
+                new TagModel { Id = Guid.NewGuid(), Name = "Environment", Color = "#84CC16" }
+            };
+            await context.Tags.AddRangeAsync(Tags);
+  
 
             var users = new List<UserModel>
             {
@@ -27,7 +65,7 @@ namespace Infrastructure
             };
 
             await context.Users.AddRangeAsync(users);
-            await context.SaveChangesAsync();
+  
 
             var events = new List<EventModel>
             {
@@ -45,6 +83,10 @@ namespace Infrastructure
                     Participants = new List<UserModel>
                     {
                         users[1], users[2], users[3], users[4], users[5]
+                    },
+                    Tags = new List<TagModel>
+                    {
+                        Tags[2], Tags[15], Tags[16], Tags[10], Tags[11]
                     }
                 },
                 new()
@@ -61,6 +103,10 @@ namespace Infrastructure
                     Participants = new List<UserModel>
                     {
                         users[0], users[6], users[8]
+                    },
+                    Tags = new List<TagModel>
+                    {
+                        Tags[0], Tags[9], Tags[4]
                     }
                 },
                 new()
@@ -77,6 +123,10 @@ namespace Infrastructure
                     Participants = new List<UserModel>
                     {
                         users[7], users[8], users[9]
+                    },
+                    Tags = new List<TagModel>
+                    {
+                        Tags[2], Tags[4], Tags[21], Tags[0]
                     }
                 }
             };
@@ -84,7 +134,6 @@ namespace Infrastructure
             await context.Events.AddRangeAsync(events);
             await context.SaveChangesAsync();
 
-            await context.SaveChangesAsync();
         }
 
 

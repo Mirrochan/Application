@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { AuthService } from '../../../data/services/auth.service';
 import { DeleteModalComponent } from "../delete-modal/delete-modal.component";
+import { Tag } from '../../../data/interfaces/tag.model';
 
 interface EventFullInfo {
   id: string;
@@ -29,6 +30,7 @@ export class EventDetailsComponent implements OnInit {
   isLoading = true;
   error: string | null = null;
 
+  eventTags: Tag[] = [];
   ShowModal: boolean = false;
   isDeleting: boolean = false;
 
@@ -55,6 +57,7 @@ export class EventDetailsComponent implements OnInit {
     this.eventsService.getEventById(eventId).subscribe({
       next: (event: any) => {
         this.event = event;
+        this.eventTags = event.tags;
         this.isLoading = false;
       },
       error: (error) => {

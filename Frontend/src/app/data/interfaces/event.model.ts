@@ -1,3 +1,4 @@
+import { Tag } from "./tag.model";
 import { User } from "./user.model";
 
 
@@ -13,6 +14,7 @@ export interface EventModel {
   participantCount: number;
   organizerName: string;
   isParticipant?: boolean;
+  tags: Tag[];
 }
 export interface EventFullInfo{
   id: string;
@@ -24,12 +26,14 @@ export interface EventFullInfo{
   participants: string[];
   isOrganizer: boolean;
   isParticipant: boolean;
+  tags: Tag[]
 }
 export interface MyEvents 
 {
   id: string;
   title: string;
-  date: Date
+  date: Date;
+  color: string;
 }
 export interface CreateEventRequest {
   title: string;
@@ -38,6 +42,7 @@ export interface CreateEventRequest {
   location: string;
   capacity?: number;
   isPublic: boolean;
+  tagIds: string[];
 }
 
 export interface UpdateEventRequest {
@@ -47,4 +52,6 @@ export interface UpdateEventRequest {
   location?: string;
   capacity?: number;
   isPublic:boolean;
+  tagIds: string[];
+
 }
