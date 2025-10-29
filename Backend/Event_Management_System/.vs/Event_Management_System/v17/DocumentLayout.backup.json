@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Event Management System\\Backend\\Event_Management_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.develop.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.develop.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.develop.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.develop.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -186,7 +186,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
@@ -242,12 +242,8 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.Develop.json",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.Develop.json",
               "RelativeDocumentMoniker": "Event_Management_System\\appsettings.Develop.json",
@@ -255,8 +251,7 @@
               "RelativeToolTip": "Event_Management_System\\appsettings.Develop.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T20:41:41.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T20:41:41.296Z"
             },
             {
               "$type": "Document",
@@ -268,12 +263,11 @@
               "RelativeToolTip": "Event_Management_System\\appsettings.json.example",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-28T20:40:50.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T20:40:50.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Event_Management_System\\appsettings.Development.json",
@@ -294,8 +288,7 @@
               "RelativeToolTip": "Event_Management_System\\Program.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAwwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T16:37:11.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T16:37:11.156Z"
             },
             {
               "$type": "Document",
@@ -317,10 +310,9 @@
               "RelativeDocumentMoniker": "Event_Management_System\\appsettings.json",
               "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json",
               "RelativeToolTip": "Event_Management_System\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T16:32:51.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T16:32:51.264Z"
             },
             {
               "$type": "Document",
@@ -368,8 +360,7 @@
               "RelativeToolTip": "Infrastructure\\DbSeeds.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAACbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T12:23:20.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T12:23:20.003Z"
             },
             {
               "$type": "Document",
@@ -766,6 +757,10 @@
               "ViewState": "AgIAAAcAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T16:19:09.005Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

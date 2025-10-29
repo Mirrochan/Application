@@ -1,80 +1,119 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { EventsService } from '../../../data/services/events.service';
-import { AuthService } from '../../../data/services/auth.service';
-import { TagService } from '../../../data/services/tag.service';
-import { Router, RouterModule } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs';
+
+
+import { AuthService } from '../../../data/services/auth.service';
+
 import { EventModel } from '../../../data/interfaces/event.model';
 import { Tag } from '../../../data/interfaces/tag.model';
 
+
+import { 
+  loadEvents, 
+  joinEvent, 
+  leaveEvent,
+  filterEventsBySearch,
+  filterEventsByTags,
+  loadTags
+} from '../../../state/event-list/event-list.actions';
+import { 
+  selectFilteredEvents, 
+  selectTags,
+  selectedTagIds,
+  selectSearchTerm,
+  selectEventsLoading,
+  selectEventsError 
+} from '../../../state/event-list/event-list.selectors';
+import { AppState } from '../../../state/app.state';
+
 @Component({
   selector: 'app-event-list',
+  standalone: true,
   imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.scss'
 })
-export class EventsListComponent implements OnInit {
-  events: EventModel[] = [];
-  allTags: Tag[] = [];
-  filteredTags: Tag[] = [];
+export class EventsListComponent implements OnInit, OnDestroy {
+  filteredEvents: EventModel[] = [];
+  tags: Tag[] = [];
   selectedTagIds: string[] = [];
   searchTerm = '';
-  tagSearchTerm = '';
-  isLoading = true;
-  isTagsLoading = true;
+  isLoading = false;
+  error: string | null = null;
+
+ 
   isDropdownOpen = false;
+  tagSearchTerm = '';
+  filteredTags: Tag[] = [];
+  
+  private subscriptions = new Subscription();
 
   constructor(
-    private eventsService: EventsService,
-    private tagService: TagService,
+    private store: Store<AppState>,
     public authService: AuthService,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    this.loadEvents();
-    this.loadTags();
+  
+    this.store.dispatch(loadEvents());
+    this.store.dispatch(loadTags());
+
+  
+    this.subscriptions.add(
+      this.store.select(selectFilteredEvents).subscribe(events => {
+        this.filteredEvents = events;
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.select(selectTags).subscribe(tags => {
+        this.tags = tags;
+        this.filteredTags = tags; 
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.select(selectedTagIds).subscribe(tagIds => {
+        this.selectedTagIds = tagIds;
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.select(selectSearchTerm).subscribe(term => {
+        this.searchTerm = term;
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.select(selectEventsLoading).subscribe(loading => {
+        this.isLoading = loading;
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.select(selectEventsError).subscribe(error => {
+        this.error = error;
+      })
+    );
   }
 
-  @HostListener('document:keydown.escape')
-  onEscapePress() {
-    this.closeDropdown();
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 
-  loadEvents(): void {
-    this.eventsService.getPublicEvents().subscribe({
-      next: (events) => {
-        this.events = events;
-        this.isLoading = false;
-      },
-      error: (error) => {
-        console.error('Error loading events:', error);
-        this.isLoading = false;
-      }
-    });
+
+  onSearchChange(): void {
+    this.store.dispatch(filterEventsBySearch({ searchTerm: this.searchTerm }));
   }
 
-  loadTags(): void {
-    this.tagService.getAllTags().subscribe({
-      next: (tags: any) => {
-        this.allTags = tags;
-        this.filteredTags = tags;
-        this.isTagsLoading = false;
-      },
-      error: (error) => {
-        console.error('Error loading tags:', error);
-        this.isTagsLoading = false;
-      }
-    });
-  }
 
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
-    if (this.isDropdownOpen) {
-      this.tagSearchTerm = '';
-      this.filteredTags = this.allTags;
-    }
   }
 
   closeDropdown(): void {
@@ -82,102 +121,56 @@ export class EventsListComponent implements OnInit {
   }
 
   onTagSearch(): void {
-    if (!this.tagSearchTerm.trim()) {
-      this.filteredTags = this.allTags;
-      return;
+    if (!this.tagSearchTerm) {
+      this.filteredTags = this.tags;
+    } else {
+      const searchLower = this.tagSearchTerm.toLowerCase();
+      this.filteredTags = this.tags.filter(tag => 
+        tag.name.toLowerCase().includes(searchLower)
+      );
     }
-
-    const searchLower = this.tagSearchTerm.toLowerCase();
-    this.filteredTags = this.allTags.filter(tag =>
-      tag.name.toLowerCase().includes(searchLower)
-    );
   }
 
   toggleTagFilter(tagId: string): void {
-    const index = this.selectedTagIds.indexOf(tagId);
-    if (index > -1) {
-      this.selectedTagIds.splice(index, 1);
-    } else {
-      this.selectedTagIds.push(tagId);
-    }
-  }
-
-  removeTag(tagId: string): void {
-    this.selectedTagIds = this.selectedTagIds.filter(id => id !== tagId);
-  }
-
-  selectAllTags(): void {
-    this.selectedTagIds = this.allTags.map(tag => tag.id);
+    const newTagIds = this.selectedTagIds.includes(tagId)
+      ? this.selectedTagIds.filter(id => id !== tagId)
+      : [...this.selectedTagIds, tagId];
+    
+    this.store.dispatch(filterEventsByTags({ tagIds: newTagIds }));
   }
 
   isTagSelected(tagId: string): boolean {
     return this.selectedTagIds.includes(tagId);
   }
 
+  removeTag(tagId: string): void {
+    const newTagIds = this.selectedTagIds.filter(id => id !== tagId);
+    this.store.dispatch(filterEventsByTags({ tagIds: newTagIds }));
+  }
+
   clearTagFilters(): void {
-    this.selectedTagIds = [];
-    this.closeDropdown();
+    this.store.dispatch(filterEventsByTags({ tagIds: [] }));
+  }
+
+  selectAllTags(): void {
+    const allTagIds = this.tags.map(tag => tag.id);
+    this.store.dispatch(filterEventsByTags({ tagIds: allTagIds }));
   }
 
   getTagById(tagId: string): Tag | undefined {
-    return this.allTags.find(tag => tag.id === tagId);
+    return this.tags.find(tag => tag.id === tagId);
   }
 
+
   joinEvent(event: EventModel): void {
-    this.eventsService.joinEvent(event.id).subscribe({
-      next: () => {
-        event.isParticipant = true;
-        event.participantCount++;
-      },
-      error: (error) => {
-        console.error('Error joining event:', error);
-        alert(error.error?.error || 'Failed to join event');
-      }
-    });
+    this.store.dispatch(joinEvent({ eventId: event.id }));
   }
 
   leaveEvent(event: EventModel): void {
-    this.eventsService.leaveEvent(event.id).subscribe({
-      next: () => {
-        event.isParticipant = false;
-        event.participantCount--;
-      },
-      error: (error) => {
-        console.error('Error leaving event:', error);
-        alert(error.error?.error || 'Failed to leave event');
-      }
-    });
+    this.store.dispatch(leaveEvent({ eventId: event.id }));
   }
 
-  get filteredEvents(): EventModel[] {
-    let filtered = this.events;
-
-    if (this.searchTerm) {
-      const searchLower = this.searchTerm.toLowerCase();
-      filtered = filtered.filter(event =>
-        event.title.toLowerCase().includes(searchLower) ||
-        event.shortDescription.toLowerCase().includes(searchLower) ||
-        event.location.toLowerCase().includes(searchLower)
-      );
-    }
-
- 
-    if (this.selectedTagIds.length > 0) {
-      filtered = filtered.filter(event =>
-        this.selectedTagIds.every(selectedTagId =>
-          event.tags.some(eventTag => eventTag.id === selectedTagId)
-        )
-      );
-    }
-
-    return filtered;
-  }
-
-  viewEventDetails(eventId: string): void {
-    this.router.navigate(['/events', eventId]);
-  }
-
-  openEvent(id: string) {
+  openEvent(id: string): void {
     this.router.navigate(['/event-details', id]);
   }
 }

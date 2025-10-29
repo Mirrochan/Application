@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\Event Management System\\Backend\\Event_Management_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|e:\\event management system\\backend\\event_management_system\\event_management_system\\appsettings.develop.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0AC878D6-4E93-40E5-98CB-EE8EF9FF1222}|Event_Management_System\\Event_Management_System.csproj|solutionrelative:event_management_system\\appsettings.develop.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -186,11 +182,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "TagRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\TagRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\TagRepository.cs",
@@ -199,7 +195,8 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwBkAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T12:26:51.537Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -242,8 +239,12 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.Develop.json",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.Develop.json",
               "RelativeDocumentMoniker": "Event_Management_System\\appsettings.Develop.json",
@@ -256,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "appsettings.json.example",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json.example",
               "RelativeDocumentMoniker": "Event_Management_System\\appsettings.json.example",
@@ -268,20 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Event_Management_System\\appsettings.Development.json",
-              "ToolTip": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.Development.json",
-              "RelativeToolTip": "Event_Management_System\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T20:40:34.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Program.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Program.cs",
@@ -293,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "EventRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\EventRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\EventRepository.cs",
@@ -305,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\appsettings.json",
               "RelativeDocumentMoniker": "Event_Management_System\\appsettings.json",
@@ -313,12 +301,11 @@
               "RelativeToolTip": "Event_Management_System\\appsettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T16:32:51.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T16:32:51.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "AiAssistantController.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\AiAssistantController.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\AiAssistantController.cs",
@@ -330,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "AiConversationRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\AiConversationRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\AiConversationRepository.cs",
@@ -342,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "EventManagmentSystemDbContext.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\EventManagmentSystemDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\EventManagmentSystemDbContext.cs",
@@ -354,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DbSeeds.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\DbSeeds.cs",
               "RelativeDocumentMoniker": "Infrastructure\\DbSeeds.cs",
@@ -366,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "AiAssistantService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\AiAssistantService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\AiAssistantService.cs",
@@ -378,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Middlewares\\ExceptionHandlingMiddleware.cs",
@@ -390,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "GroqAiProvider.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\AI\\GroqAiProvider.cs",
               "RelativeDocumentMoniker": "Infrastructure\\AI\\GroqAiProvider.cs",
@@ -402,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "EventController.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\EventController.cs",
@@ -414,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
@@ -426,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "AiAssistantDtos.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\AiAssistantDtos.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\AiAssistantDtos.cs",
@@ -438,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "TagController.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\TagController.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\TagController.cs",
@@ -450,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "GroqApiSettings.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\AI\\GroqApiSettings.cs",
               "RelativeDocumentMoniker": "Infrastructure\\AI\\GroqApiSettings.cs",
@@ -462,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Infrastructure.csproj",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
@@ -474,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "IAiConversationRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IAiConversationRepository.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IAiConversationRepository.cs",
@@ -486,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\AuthController.cs",
@@ -498,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "IAiProvider.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IAiProvider.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IAiProvider.cs",
@@ -510,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "EventResponses.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventResponses.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\EventResponses.cs",
@@ -522,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "AiConversationModel.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\AiConversationModel.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\AiConversationModel.cs",
@@ -534,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "IEventService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IEventService.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IEventService.cs",
@@ -546,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "EventRequests.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\EventRequests.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\EventRequests.cs",
@@ -558,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Event_Management_System\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Event_Management_System\\Controllers\\UserController.cs",
@@ -570,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "EventService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\EventService.cs",
@@ -582,7 +569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "TagService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\TagService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\TagService.cs",
@@ -594,7 +581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "CreateEventRequestValidator.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Validators\\CreateEventRequestValidator.cs",
               "RelativeDocumentMoniker": "Application\\Validators\\CreateEventRequestValidator.cs",
@@ -606,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
@@ -618,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "ITagService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\ITagService.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\ITagService.cs",
@@ -630,7 +617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "ITagRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\ITagRepository.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\ITagRepository.cs",
@@ -642,7 +629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "TagDto.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\TagDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\TagDto.cs",
@@ -654,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "AuthDtos.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\DTOs\\AuthDtos.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\AuthDtos.cs",
@@ -666,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "IUserService.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserService.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IUserService.cs",
@@ -678,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Application\\Abstractions\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IUserRepository.cs",
@@ -690,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "EventModel.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\EventModel.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\EventModel.cs",
@@ -702,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "TagModel.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\TagModel.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\TagModel.cs",
@@ -714,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "UserModel.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Domain\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\UserModel.cs",
@@ -726,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "JwtOptions.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtOptions.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Jwt\\JwtOptions.cs",
@@ -738,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Jwt\\PasswordHasher.cs",
@@ -750,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "JwtProvider.cs",
               "DocumentMoniker": "E:\\Event Management System\\Backend\\Event_Management_System\\Infrastructure\\Jwt\\JwtProvider.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Jwt\\JwtProvider.cs",
@@ -759,10 +746,6 @@
               "ViewState": "AgIAAAcAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T16:19:09.005Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }
