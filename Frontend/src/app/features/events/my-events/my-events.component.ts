@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { MyEvents } from '../../../data/interfaces/event.model';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-my-events',
@@ -11,7 +13,8 @@ import { MyEvents } from '../../../data/interfaces/event.model';
   templateUrl: './my-events.component.html',
   styleUrls: ['./my-events.component.scss']
 })
-export class MyEventsComponent implements OnInit {
+export class MyEventsComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
   events: MyEvents[] = [];
   viewMode: 'month' | 'week' = 'month';
 
@@ -33,7 +36,9 @@ export class MyEventsComponent implements OnInit {
   }
 
   loadEvents() {
-    this.eventService.getUserEvents().subscribe({
+    this.eventService.getUserEvents()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (data) => {
         (this.events = data)
         if (this.events.length == 0 || this.events ==null) { this.isEvents = false; } else { this.isEvents = true; }
@@ -123,5 +128,10 @@ export class MyEventsComponent implements OnInit {
     const diff = start.getDate() - day + (day === 0 ? -7 : 0);
     start.setDate(diff);
     return start;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

@@ -68,3 +68,4 @@ E:\Event Management System\Backend\Event_Management_System\Event_Management_Syst
 E:\Event Management System\Backend\Event_Management_System\Event_Management_System\obj\Debug\net9.0\Event_Management_System.sourcelink.json
 E:\Event Management System\Backend\Event_Management_System\Event_Management_System\bin\Debug\net9.0\DotNetEnv.dll
 E:\Event Management System\Backend\Event_Management_System\Event_Management_System\bin\Debug\net9.0\Sprache.dll
+E:\Event Management System\Backend\Event_Management_System\Event_Management_System\bin\Debug\net9.0\appsettings.Develop.json

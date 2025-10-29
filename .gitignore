@@ -1,5 +1,4 @@
 # Root .gitignore for the repository
-appsettings.json
 # Ignore build artifacts
 **/bin/
 **/obj/

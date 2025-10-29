@@ -8,6 +8,8 @@ import { MyEventsComponent } from './features/events/my-events/my-events.compone
 import { EventDetailsComponent } from './features/events/event-details/event-details.component';
 import { CreateEventComponent } from './features/events/create-event/create-event.component';
 import { UpdateEventComponent } from './features/events/update-event/update-event.component';
+import { AiAssistantComponent } from './features/ai/ai-assistant/ai-assistant.component';
+
 export const routes: Routes = [
     {path:'', component:LoginComponent } ,
     {path:'login', component:LoginComponent } ,
@@ -16,5 +18,6 @@ export const routes: Routes = [
     {path:'my-events', component: MyEventsComponent, canActivate: [AuthGuard]},
     {path:'event-details/:id', component: EventDetailsComponent, canActivate: [AuthGuard]},
     {path:'create-event', component:CreateEventComponent, canActivate: [AuthGuard]},
-    {path:'update-event/:id', component:UpdateEventComponent, canActivate: [AuthGuard]}
+    {path:'update-event/:id', component:UpdateEventComponent, canActivate: [AuthGuard]},
+    {path:'ai-assistant', component:AiAssistantComponent, canActivate: [AuthGuard]},
 ];

@@ -14,6 +14,7 @@ namespace Application.DTOs
         public List<string> Participants { get; set; } = new();
         public bool IsOrganizer { get; set; }
         public bool IsParticipant { get; set; }
+        public ICollection<TagDto>? Tags { get; set; }
     }
 
     public class EventSummaryResponse
@@ -29,6 +30,7 @@ namespace Application.DTOs
         public int ParticipantCount { get; set; }
         public required string OrganizerName { get; set; }
         public bool IsParticipant { get; set; }
+        public ICollection<TagDto>? Tags { get; set; }
     }
 
     public class CalendarEventResponse
@@ -36,7 +38,6 @@ namespace Application.DTOs
         public Guid Id { get; set; }
         public required string Title { get; set; }
         public DateTime Date { get; set; }
-        public required string Location { get; set; }
-        public required string EventType { get; set; }
+        public string Color { get; set; }
     }
 }

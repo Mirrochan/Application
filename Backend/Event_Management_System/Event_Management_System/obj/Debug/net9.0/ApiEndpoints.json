@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Event_Management_System.Controllers.AiAssistantController",
+    "Method": "AskQuestion",
+    "RelativePath": "ai-assistant/ask",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.AiAssistantQuestionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event_Management_System.Controllers.AiAssistantController",
+    "Method": "GetConversationHistory",
+    "RelativePath": "ai-assistant/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Event_Management_System.Controllers.AuthController",
     "Method": "CheckAuth",
     "RelativePath": "auth/check",
@@ -160,6 +186,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event_Management_System.Controllers.TagController",
+    "Method": "GetAllTags",
+    "RelativePath": "tags/getAllTags",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

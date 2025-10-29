@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../data/services/auth.service';
 import { CommonModule } from '@angular/common';
+import { Subject, take } from 'rxjs';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { CommonModule } from '@angular/common';
   imports:[CommonModule, ReactiveFormsModule],
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnDestroy {
+  private destroy$ = new Subject<void>();
   loginForm: FormGroup;
   errorMessage = '';
   isLoading = false;
@@ -21,13 +23,13 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router
   ) {
-    authService.checkAuth().subscribe({
+    authService.checkAuth().pipe(take(1)).subscribe({
       next:()=>{ 
         if(authService.isLoggedIn())
         {
            this.setName();
            this.router.navigate(['/events']);}}
-    })
+    });
 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -53,6 +55,11 @@ export class LoginComponent {
       });
     }
   }
+ ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
  setName() {
   this.authService.getName().subscribe({
     next: (name) => {

@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EventsService } from '../../../data/services/events.service';
 import { CreateEventRequest } from '../../../data/interfaces/event.model';
+import { Tag } from '../../../data/interfaces/tag.model';
+import { TagService } from '../../../data/services/tag.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-create-event',
@@ -12,14 +16,21 @@ import { CreateEventRequest } from '../../../data/interfaces/event.model';
   templateUrl: './create-event.component.html',
   styleUrls: ['./create-event.component.scss']
 })
-export class CreateEventComponent {
+export class CreateEventComponent implements OnDestroy {
+  private destroy$ = new Subject<void>();
   eventForm: FormGroup;
   submitting = false;
   backendError: string | null = null;
+
+  availableTags: Tag[] = [];
+  selectedTags: Tag[] = [];
+
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private eventService: EventsService
+    private eventService: EventsService,
+    private tagService: TagService
   ) {
     this.eventForm = this.fb.group({
       title: ['', Validators.required],
@@ -30,6 +41,31 @@ export class CreateEventComponent {
       capacity: [''],
       visibility: [true, Validators.required],
     });
+  }
+ngOnInit(): void {
+    this.fetchAvailableTags();
+  }
+  private fetchAvailableTags(): void {
+
+    this.tagService.getAllTags()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+      next: (tags: any) => {
+        this.availableTags = tags;
+      },
+      error: (err: any) => {
+        console.error('Error fetching tags:', err);
+      }
+    });
+  }
+  public selectTag(tag: Tag): void {
+    if (this.selectedTags.length >= 5) return;
+    this.selectedTags.push(tag);
+    this.availableTags = this.availableTags.filter(t => t.id !== tag.id);
+  }
+  public deselectTag(tag: Tag): void {
+    this.availableTags.push(tag);
+    this.selectedTags = this.selectedTags.filter(t => t.id !== tag.id);
   }
 
   onSubmit() {
@@ -46,10 +82,13 @@ export class CreateEventComponent {
 
       location: form.location,
       capacity: form.capacity ? +form.capacity : 0,
-      isPublic: form.visibility
+      isPublic: form.visibility,
+      tagIds: this.selectedTags.map(tag => tag.id)
     };
 
-    this.eventService.createEvent(newEvent).subscribe({
+    this.eventService.createEvent(newEvent)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (data1) => {
         this.submitting = false;
         this.backendError = null;
@@ -100,4 +139,8 @@ export class CreateEventComponent {
     return filtered.join('\n').trim();
   }
 
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }

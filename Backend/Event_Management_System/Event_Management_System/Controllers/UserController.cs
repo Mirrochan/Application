@@ -22,7 +22,7 @@ namespace Event_Management_System.Controllers
         public async Task<IActionResult> GetMyEvents()
         {
             var userId = GetUserIdFromToken();
-            var events = await _eventService.GetMyEventsAsync(userId);
+            var events = await _eventService.GetUserEventsAsync(userId);
             return Ok(events);
         }
         [HttpGet("me")]

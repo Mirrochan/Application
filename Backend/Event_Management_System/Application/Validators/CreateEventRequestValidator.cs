@@ -27,7 +27,14 @@ namespace Application.Validators
 
             RuleFor(x => x.Capacity)
                 .GreaterThanOrEqualTo(0).WithMessage("Capacity cannot be negative");
-          
+         
+            RuleFor(x => x.TagIds)
+                .NotEmpty().WithMessage("At least one tag is required.")
+                .Must(tags => tags.Count <= 5)
+                .WithMessage("Maximum 5 tags are allowed per event.");
+
+
+
         }
     }
 }
