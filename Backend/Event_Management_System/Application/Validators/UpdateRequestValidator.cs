@@ -31,6 +31,10 @@ namespace Application.Validators
                     .GreaterThan(DateTime.UtcNow).WithMessage("Cannot set event in the past");
             });
 
+            RuleFor(x => x.TagIds)
+                .NotEmpty().WithMessage("At least one tag is required.")
+                .Must(tags => tags.Count <= 5)
+                .WithMessage("Maximum 5 tags are allowed per event.");
             
         }
     }
